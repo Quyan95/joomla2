@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="image">
+		<fields name="image">
+	        <field name="blockStart" type="nr_well"
+				label="PLG_ENGAGEBOX_IMAGE_ALIAS"
+				description="PLG_ENGAGEBOX_IMAGE_SETTINGS_DESC"
+	        />
+	        <field name="type" type="list" 
+	            label="PLG_ENGAGEBOX_IMAGE_SOURCE"
+	            description="PLG_ENGAGEBOX_IMAGE_SOURCE_DESC"
+	            filter="intval"
+	            size="1" 
+	            default="1">
+	                <option value="1">NR_UPLOAD</option>
+	                <option value="2">PLG_ENGAGEBOX_IMAGE_CUSTOM_URL</option>
+	        </field>
+	        <field name="imageurl" type="text"
+	            hint="http://"
+	            label="NR_URL"
+	            description="PLG_ENGAGEBOX_IMAGE_CUSTOM_URL_DESC"
+	            showon="type:2"
+	        />
+	        <field name="imagefile" type="media"
+	            label="NR_IMAGE_SELECT"
+	            description="COM_CONVERTFORMS_IMAGE_SOURCE"
+	            showon="type:1"
+	        />
+	        <field name="width" type="text" 
+	            default="100%" 
+	            class="input-small" 
+	            label="NR_WIDTH"
+	            description="NR_WIDTH_DESC"
+				hint="100%"
+			/>
+	        <field name="height" type="text"
+	        	default="auto" 
+	            class="input-small" 
+	            label="NR_HEIGHT"
+	            description="NR_HEIGHT_DESC"
+				hint="auto"
+			/>
+	        <field name="alt" type="text"
+	            label="PLG_ENGAGEBOX_IMAGE_ALT"
+	            description="PLG_ENGAGEBOX_IMAGE_ALT_DESC"
+				hint="PLG_ENGAGEBOX_IMAGE_ALT"
+	        />
+	        <field name="class" type="text"
+	            label="COM_RSTBOX_ITEM_CLASSSUFFIX"
+	            description="COM_RSTBOX_ITEM_CLASSSUFFIX_DESC"
+				hint="COM_RSTBOX_ITEM_CLASSSUFFIX"
+	        />
+	        <field name="blockEnd" type="nr_well"
+				end="1"
+	        />
+	        <field name="onClickBlockStart" type="nr_well"
+				label="PLG_ENGAGEBOX_IMAGE_ONCLICK"
+				description="PLG_ENGAGEBOX_IMAGE_ONCLICK_DESC"
+	        />
+	        <field name="onclick" type="list" 
+	            label="PLG_ENGAGEBOX_IMAGE_ONCLICK"
+	            description="PLG_ENGAGEBOX_IMAGE_ONCLICK_DESC"
+	            default="url">
+	                <option value="url">PLG_ENGAGEBOX_IMAGE_ONCLICK_GOTOURL</option>
+	                <option value="close">PLG_ENGAGEBOX_IMAGE_ONCLICK_CLOSE</option>
+	        </field>
+	        <field name="url" type="url"
+	            label="NR_URL"
+	            description="PLG_ENGAGEBOX_IMAGE_URL_DESC"
+	            showon="onclick:url"
+	            hint="http://"
+				class="input-xxlarge"
+	        />
+	        <field name="newtab" type="nrtoggle"
+	            label="PLG_ENGAGEBOX_IMAGE_OPEN_IN_NEW_TAB"
+	            description="PLG_ENGAGEBOX_IMAGE_OPEN_IN_NEW_TAB_DESC"
+				showon="onclick:url"
+			/>
+	        <field name="cookie" type="nrtoggle"
+	            label="PLG_ENGAGEBOX_IMAGE_PLACE_COOKIE"
+	            description="PLG_ENGAGEBOX_IMAGE_PLACE_COOKIE_DESC"
+			/>
+	        <field name="onClickBlockEnd" type="nr_well"
+				end="1"
+	        />
+		</fields>
+    </fieldset>
+</form>

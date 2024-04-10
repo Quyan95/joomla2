@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="calculations" label="PLG_CONVERTFORMSTOOLS_CALCULATIONS_ALIAS" addfieldpath="plugins/convertformstools/calculations/fields">
+        
+        
+        <fields name="calculations">
+            <field name="enable" type="nrtoggle"
+                label="PLG_CONVERTFORMSTOOLS_CALCULATIONS_ENABLE"
+                description="PLG_CONVERTFORMSTOOLS_CALCULATIONS_DESC"
+            />
+            <field name="formula" type="calculationbuilder"
+                label="PLG_CONVERTFORMSTOOLS_CALCULATIONS_FORMULA"
+                description="PLG_CONVERTFORMSTOOLS_CALCULATIONS_FORMULA_DESC"
+                showon="enable:1"
+                hint="{field.xxx} + {field.yyy}"
+                rows="7"
+            />
+            <field name="precision" type="number"
+                label="PLG_CONVERTFORMSTOOLS_CALCULATIONS_PRECISION"
+                description="PLG_CONVERTFORMSTOOLS_CALCULATIONS_PRECISION_DESC"
+                default="2"
+                class="norender"
+                min="0"
+                showon="enable:1"
+            />
+            <field name="decimal_separator" type="list"
+                label="PLG_CONVERTFORMSTOOLS_CALCULATIONS_DECIMAL_SEPARATOR"
+                description="PLG_CONVERTFORMSTOOLS_CALCULATIONS_DECIMAL_SEPARATOR_DESC"
+                class="norender"
+                showon="enable:1[AND]precision!:0"
+                default=".">
+                <option value=".">PLG_CONVERTFORMSTOOLS_CALCULATIONS_THOUSAND_SEPARATOR_DOT</option>
+                <option value=",">PLG_CONVERTFORMSTOOLS_CALCULATIONS_THOUSAND_SEPARATOR_COMMA</option>
+            </field>
+            <field name="thousand_separator" type="list"
+                label="PLG_CONVERTFORMSTOOLS_CALCULATIONS_THOUSAND_SEPARATOR"
+                description="PLG_CONVERTFORMSTOOLS_CALCULATIONS_THOUSAND_SEPARATOR_DESC"
+                class="norender"
+                showon="enable:1">
+                <option value="">JDISABLED</option>
+                <option value=",">PLG_CONVERTFORMSTOOLS_CALCULATIONS_THOUSAND_SEPARATOR_COMMA</option>
+                <option value=".">PLG_CONVERTFORMSTOOLS_CALCULATIONS_THOUSAND_SEPARATOR_DOT</option>
+                <option value="custom">NR_CUSTOM</option>
+            </field>
+            <field name="thousand_separator_custom" type="text"
+                label="PLG_CONVERTFORMSTOOLS_CALCULATIONS_THOUSAND_SEPARATOR_CUSTOM"
+                class="norender"
+                showon="enable:1[AND]thousand_separator:custom"
+            />
+            <field name="prefix" type="text"
+                label="PLG_CONVERTFORMSTOOLS_CALCULATIONS_PREFIX"
+                description="PLG_CONVERTFORMSTOOLS_CALCULATIONS_PREFIX_DESC"
+                class="norender"
+                showon="enable:1"
+            />
+            <field name="suffix" type="text"
+                label="PLG_CONVERTFORMSTOOLS_CALCULATIONS_SUFFIX"
+                description="PLG_CONVERTFORMSTOOLS_CALCULATIONS_SUFFIX_DESC"
+                class="norender"
+                showon="enable:1"
+            />
+        </fields>
+        
+    </fieldset>
+</form>

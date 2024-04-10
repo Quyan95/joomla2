@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="main" addfieldpath="administrator/components/com_rstbox/models/forms/fields">
+        <field name="boxid" type="boxes"
+            label="PLG_EDITORS-XTD_ENGAGEBOX_SELECT_BOX"
+            description="PLG_EDITORS-XTD_ENGAGEBOX_SELECT_BOX_DESC"
+            class="span12">
+            <option value="0">PLG_EDITORS-XTD_ENGAGEBOX_USESAMEBOX</option>
+        </field>
+        <field name="type" type="list"
+            label="Button Type"
+            default="button"
+            class="span12">
+            <option value="button">Button</option>
+            <option value="a">Link</option>
+            <option value="div">Div</option>
+        </field>
+        <field name="href" type="url"
+            label="PLG_EDITORS-XTD_ENGAGEBOX_HREF"
+            description="PLG_EDITORS-XTD_ENGAGEBOX_HREF_DESC"
+            hint="http://"
+            showon="type:a"
+            class="span12"
+        />
+        <field name="label" type="text"
+            required="true"
+            label="PLG_EDITORS-XTD_ENGAGEBOX_LABEL"
+            description="PLG_EDITORS-XTD_ENGAGEBOX_LABEL_DESC"
+            default="Close"
+            class="span12"
+        />
+        <field name="cmd" type="list"
+            label="PLG_EDITORS-XTD_ENGAGEBOX_ACTION" 
+            description="PLG_EDITORS-XTD_ENGAGEBOX_ACTION_DESC" 
+            class="span12"
+            default="close">
+            <option value="open">PLG_EDITORS-XTD_ENGAGEBOX_OPEN</option>
+            <option value="close">PLG_EDITORS-XTD_ENGAGEBOX_CLOSE</option>
+            <option value="toggle">PLG_EDITORS-XTD_ENGAGEBOX_TOGGLE</option>
+        </field>
+    </fieldset>
+</form>

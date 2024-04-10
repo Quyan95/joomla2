@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="service">
+        <field name="api" type="nrtext"
+            label="PLG_CONVERTFORMS_CONVERTKIT_KEY"
+            description="PLG_CONVERTFORMS_CONVERTKIT_KEY_DESC"
+            class="input-xlarge"
+            required="true"
+            url="https://www.tassos.gr/joomla-extensions/convert-forms/docs/sync-leads-with-convertkit"
+            urltext="PLG_CONVERTFORMS_CONVERTKIT_FIND_API_KEY"
+        />
+        <field name="formid" type="nrtext"
+            label="PLG_CONVERTFORMS_CONVERTKIT_FORM_ID"
+            description="PLG_CONVERTFORMS_CONVERTKIT_FORM_ID_DESC"
+            class="input-xlarge"
+            required="true"
+            urltext="PLG_CONVERTFORMS_CONVERTKIT_FIND_FORM_ID"
+            url="https://www.tassos.gr/joomla-extensions/convert-forms/docs/sync-leads-with-convertkit"
+        />
+    </fieldset>
+</form>

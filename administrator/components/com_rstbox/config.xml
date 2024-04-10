@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset name="Misc" label="General" addfieldpath="/plugins/system/nrframework/fields">
+        <field name="loadCSS" type="radio" 
+            default="1" 
+            class="btn-group btn-group-yesno"
+            label="COM_RSTBOX_LOADCSS"
+            description="COM_RSTBOX_LOADCSS_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="loadVelocity" type="radio" 
+            default="1"
+            class="btn-group btn-group-yesno"
+            label="COM_RSTBOX_LOADVELOCITY"
+            description="COM_RSTBOX_LOADVELOCITY_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="preparecontent" default="1" class="btn-group btn-group-yesno" type="radio" label="COM_RSTBOX_PREPARE_CONTENT" description="COM_RSTBOX_PREPARE_CONTENT_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="assign_offline" type="radio"
+            default="1" 
+            class="btn-group btn-group-yesno"
+            label="COM_RSTBOX_ASSIGN_OFFLINE"
+            description="COM_RSTBOX_ASSIGN_OFFLINE_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="rtl" default="0" class="btn-group btn-group-yesno" type="radio" label="NR_RTL" description="NR_RTL_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="preventpagescroll" default="0" class="btn-group btn-group-yesno" type="radio" label="COM_RSTBOX_PREVENT_PAGE_SCROLL" description="COM_RSTBOX_PREVENT_PAGE_SCROLL_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field type="textarea"
+            name="globalFooter"
+            label="COM_RSTBOX_GLOBAL_FOOTER"
+            hint="COM_RSTBOX_GLOBAL_FOOTER_DESC"
+            filter="raw"
+            description="COM_RSTBOX_GLOBAL_FOOTER_DESC"
+            rows="8"
+            class="span12 input-full"
+        />
+        
+        <field name="showcopyright" default="1" class="btn-group btn-group-yesno" type="radio" label="NR_SHOW_COPYRIGHT" description="NR_SHOW_COPYRIGHT_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="debug" default="0" class="btn-group btn-group-yesno" type="radio" label="COM_RSTBOX_DEBUG" description="COM_RSTBOX_DEBUG_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+    </fieldset>
+    <fieldset name="advanced" label="Advanced">
+        <field type="radio"
+            name="stats"
+            default="1"
+            class="btn-group btn-group-yesno"
+            label="COM_RSTBOX_STATS"
+            description="COM_RSTBOX_STATS_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field type="list"
+            name="statsdays" 
+            default="90"
+            class="input-small"
+            showon="stats:1"
+            label="COM_RSTBOX_STATS_DAYS"
+            description="COM_RSTBOX_STATS_DAYS_DESC">
+            <option value="15">15</option>
+            <option value="30">30</option>
+            <option value="60">60</option>
+            <option value="90">90</option>
+            <option value="180">180</option>
+            <option value="365">365</option>
+        </field>
+        
+        <field type="radio"
+            name="gaTrack"
+            default="0"
+            class="btn-group btn-group-yesno"
+            label="COM_RSTBOX_GA"
+            description="COM_RSTBOX_GA_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="gaID" type="text" 
+            label="COM_RSTBOX_GA_ID" 
+            description="COM_RSTBOX_GA_ID_DESC"
+            showon="gaTrack:1"
+            hint="G-XXXXXXXXXX"
+        />
+        <field name="gaCategory" type="text"
+            default="EngageBox" 
+            hint="EngageBox" 
+            label="COM_RSTBOX_GA_CATEGORY"
+            description="COM_RSTBOX_GA_CATEGORY_DESC"
+            showon="gaTrack:1"
+        />
+        <field name="gaLabel" type="text"
+            default="Box #{eb.id} - {eb.title}" 
+            label="COM_RSTBOX_GA_LABEL"
+            description="COM_RSTBOX_GA_LABEL_DESC"
+            showon="gaTrack:1"
+        />
+        
+    </fieldset>
+	<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC" >
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			filter="rules"
+			validate="rules"
+			component="com_rstbox"
+			section="component" />
+	</fieldset>
+</config>

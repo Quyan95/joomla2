@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="file" version="1.0" method="upgrade">
+    <name>Translate Shaper Helix Ultimate 2.0.18</name>
+    <version>2.0.18</version>
+    <creationDate>Dec 2023</creationDate>
+    <author>Dmitry Goncharov</author>
+    <authorEmail>info@goncharoff.pro</authorEmail>
+    <authorUrl>https://goncharoff.pro</authorUrl>
+    <license>GNU General Public License version 2 or later;</license>
+    <packager>DG</packager>
+	<fileset>
+		<files folder="ru-RU" target="language/ru-RU">
+				<file>ru-RU.tpl_shaper_helixultimate.ini</file>
+		</files>
+		<files folder="ru-RU" target="administrator/language/ru-RU">
+				<file>ru-RU.plg_system_helixultimate.ini</file>
+		</files>
+  	</fileset>
+</extension>

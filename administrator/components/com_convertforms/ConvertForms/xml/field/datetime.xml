@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="basic">
+        <field name="mode" type="list"
+            label="COM_CONVERTFORMS_FIELD_DATETIME_MODE"
+            description="COM_CONVERTFORMS_FIELD_DATETIME_MODE_DESC"
+            default="date">
+                <option value="single">NR_SINGLE</option>
+                <option value="multiple">NR_MULTIPLE</option>
+                <option value="range">NR_RANGE</option>
+        </field>
+        <field name="dateformat" type="text"
+            label="COM_CONVERTFORMS_FIELD_DATETIME_FORMAT"
+            description="COM_CONVERTFORMS_FIELD_DATETIME_FORMAT_DESC"
+            default="d/m/Y H:i"
+            hint="d/m/Y H:i, m/d/Y, d-m-Y H:i"
+        />
+        <field name="firstDayOfWeek" type="list"
+            label="COM_CONVERTFORMS_FIELD_DATETIME_FIRSTDAYOFWEEK"
+            description="COM_CONVERTFORMS_FIELD_DATETIME_FIRSTDAYOFWEEK_DESC"
+            default="1">
+                <option value="1">NR_MONDAY</option>
+                <option value="2">NR_TUESDAY</option>
+                <option value="3">NR_WEDNESDAY</option>
+                <option value="4">NR_THURSDAY</option>
+                <option value="5">NR_FRIDAY</option>
+                <option value="6">NR_SATURDAY</option>
+                <option value="0">NR_SUNDAY</option>
+        </field>
+        <field name="mindate" type="text"
+            label="COM_CONVERTFORMS_FIELD_DATETIME_MIN_DATE"
+            description="COM_CONVERTFORMS_FIELD_DATETIME_MIN_DATE_DESC"
+            hint="now, today, tomorrow, -3 day, +5 day"
+        />
+        <field name="maxdate" type="text"
+            label="COM_CONVERTFORMS_FIELD_DATETIME_MAX_DATE"
+            description="COM_CONVERTFORMS_FIELD_DATETIME_MAX_DATE_DESC"
+            hint="+5 day, +2 month, +3 week"
+        />
+        <!-- Time -->
+        <field name="showtimepicker" type="nrtoggle" 
+            label="COM_CONVERTFORMS_FIELD_DATETIME_TIMEPICKER"
+            description="COM_CONVERTFORMS_FIELD_DATETIME_TIMEPICKER_DESC"
+            checked="true"
+        />
+        <field name="time24" type="nrtoggle" 
+            label="COM_CONVERTFORMS_FIELD_DATETIME_TIME24"
+            description="COM_CONVERTFORMS_FIELD_DATETIME_TIME24_DESC"
+            showon="showtimepicker:1"
+        />
+        <field name="minuteincrement" type="number"
+            label="COM_CONVERTFORMS_FIELD_DATETIME_MINUTE_STEP"
+            description="COM_CONVERTFORMS_FIELD_DATETIME_MINUTE_STEP_DESC"
+            default="5"
+            min="0"
+            showon="showtimepicker:1"
+        />
+        <field name="inline" type="nrtoggle" 
+            label="COM_CONVERTFORMS_FIELD_DATETIME_INLINE"
+            description="COM_CONVERTFORMS_FIELD_DATETIME_INLINE_DESC"
+        />
+       <field name="theme" type="list"
+            label="COM_CONVERTFORMS_FIELD_DATETIME_THEME"
+            description="COM_CONVERTFORMS_FIELD_DATETIME_THEME_DESC"
+            default="">
+                <option value="">JDEFAULT</option>
+                <option value="dark">Dark</option>
+                <option value="material_blue">Material Blue</option>
+                <option value="material_green">Material Green</option>
+                <option value="material_red">Material Red</option>
+                <option value="material_orange">Material Orange</option>
+                <option value="airbnb">Airbnb</option>
+                <option value="confetti">Confetti</option>
+        </field>
+    </fieldset>
+    <fieldset name="advanced">
+        <field name="value" type="textarea"
+            label="COM_CONVERTFORMS_FIELD_VALUE"
+            description="COM_CONVERTFORMS_FIELD_VALUE_DESC"
+            class="show-smart-tags"
+            hint="now, today, tomorrow, -3 day, +5 day"
+        />
+        <field name="disable_mobile" type="nrtoggle" 
+            label="COM_CONVERTFORMS_FIELD_DATETIME_DISABLEMOBILE"
+            description="COM_CONVERTFORMS_FIELD_DATETIME_DISABLEMOBILE_DESC"
+        />
+    </fieldset>
+    <fieldset name="restrictions">
+        <field name="readonly" type="nrtoggle" 
+            label="COM_CONVERTFORMS_READONLY"
+            description="COM_CONVERTFORMS_READONLY_DESC"
+		/>
+    </fieldset>
+</form>

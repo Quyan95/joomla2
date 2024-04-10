@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="actions" label="PLG_ENGAGEBOX_ACTIONS_NAME" description="PLG_ENGAGEBOX_ACTIONS_FIELDSET_DESC" tag="params" help="https://www.tassos.gr/joomla-extensions/engagebox/docs/working-with-actions">
+        
+        <field name="actions" type="ebactions"
+            label="PLG_ENGAGEBOX_ACTIONS_NAME"
+            hiddenLabel="true"
+            multiple="true"> 
+            <form>
+                <field name="enabled" type="nrtoggle"
+                    label="JENABLED"
+                    description="PLG_ENGAGEBOX_ACTIONS_ENABLED_DESC"
+                    checked="true"
+                />
+                <field name="when" type="list"
+                    label="PLG_ENGAGEBOX_ACTIONS_WHEN" 
+                    description="PLG_ENGAGEBOX_ACTIONS_WHEN_DESC"
+                    required="true">
+                    <option disabled="disabled" value="">PLG_ENGAGEBOX_ACTIONS_SELECT_EVENT</option>
+                    <option value="beforeOpen">PLG_ENGAGEBOX_ACTIONS_BEFORE_OPEN</option>
+                    <option value="open">PLG_ENGAGEBOX_ACTIONS_OPEN</option>
+                    <option value="afterOpen">PLG_ENGAGEBOX_ACTIONS_AFTER_OPEN</option>
+                    <option value="beforeClose">PLG_ENGAGEBOX_ACTIONS_BEFORE_CLOSE</option>
+                    <option value="close">PLG_ENGAGEBOX_ACTIONS_CLOSE</option>
+                    <option value="afterClose">PLG_ENGAGEBOX_ACTIONS_AFTER_CLOSE</option>
+                </field>
+                <field name="do" type="groupedlist"
+                    label="PLG_ENGAGEBOX_ACTIONS_DO" 
+                    description="PLG_ENGAGEBOX_ACTIONS_DO_DESC"
+                    required="true">
+                    <option disabled="disabled" value="">PLG_ENGAGEBOX_ACTIONS_SELECT_ACTION</option>
+                    <group label="Box">
+                        <option value="openbox">PLG_ENGAGEBOX_ACTIONS_OPEN_BOX</option>
+                        <option value="closebox">PLG_ENGAGEBOX_ACTIONS_CLOSE_BOX</option>
+                        <option value="destroybox">PLG_ENGAGEBOX_ACTIONS_DESTROY_BOX</option>
+                        <option value="closeall">PLG_ENGAGEBOX_ACTIONS_CLOSE_ALL</option>
+                    </group>
+                    <group label="Other">
+                        <option value="gotourl">PLG_ENGAGEBOX_ACTIONS_GO_TO_URL</option>
+                        <option value="reloadpage">PLG_ENGAGEBOX_ACTIONS_RELOAD_PAGE</option>
+                        <option value="custom">PLG_ENGAGEBOX_ACTIONS_CUSTOM_JS</option>
+                    </group>
+                </field>
+                <field name="box" type="boxes"
+                    label="COM_RSTBOX_BOX"
+                    description="PLG_ENGAGEBOX_ACTIONS_BOX_DESC"
+                    showon="do:openbox,closebox,destroybox">
+                    <option value="" disabled="disabled">COM_ENGAGEBOX_SELECT_BOX</option>
+                </field>
+                <field name="delay" type="nrnumber" 
+                    label="COM_RSTBOX_ITEM_TRIGGER_DELAY" 
+                    description="PLG_ENGAGEBOX_ACTIONS_DELAY_DESC"
+                    default="0"
+                    hint="0"
+                    addon="sec"
+                    min="0"
+                    filter="intval"
+                    class="input-mini"
+                    showon="do:openbox,closebox"
+                />
+                <field name="customcode" type="textarea"
+                    label="PLG_ENGAGEBOX_ACTIONS_JS"
+                    description="PLG_ENGAGEBOX_ACTIONS_JS_CODE"
+                    filter="raw"
+                    rows="7"
+                    class="span12 input-full"
+                    showon="do:custom"
+                    hint='var message = 10; alert(message);'
+                />
+                <field name="note1" type="note"
+                    description='Do more with the &lt;a href="https://www.tassos.gr/joomla-extensions/engagebox/docs/engagebox-javascript-api-2" target="_blank">EngageBox Javascript API&lt;/a>'
+                    class="note"
+                    showon="do:custom"
+                />
+                <field name="url" type="url"
+                    label="NR_URL"
+                    description="PLG_ENGAGEBOX_ACTIONS_URL_DESC"
+                    hint="https://"
+                    showon="do:gotourl"
+                    class="input-xxlarge"
+                />
+                <field name="newtab" type="nrtoggle"
+                    label="PLG_ENGAGEBOX_ACTIONS_NEW_TAB"
+                    description="PLG_ENGAGEBOX_ACTIONS_NEW_TAB_DESC"
+                    showon="do:gotourl"
+                />
+            </form>
+        </field>
+        
+        
+    </fieldset>
+</form>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="basic">
+        <field name="detectcountry" type="nrtoggle" 
+            label="COM_CONVERTFORMS_FIELD_COUNTRY_DETECT"
+            description="COM_CONVERTFORMS_FIELD_COUNTRY_DETECT_DESC"
+        />
+        <field name="exclude_countries" type="text" 
+            label="COM_CONVERTFORMS_FIELD_COUNTRY_EXCLUDE"
+            description="COM_CONVERTFORMS_FIELD_COUNTRY_EXCLUDE_DESC"
+        />
+    </fieldset>
+</form>

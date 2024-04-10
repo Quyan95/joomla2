@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="service">
+        <field name="api" type="nrtext"
+            label="PLG_CONVERTFORMS_HUBSPOT_KEY"
+            description="PLG_CONVERTFORMS_HUBSPOT_KEY_DESC"
+            class="input-xlarge"
+            required="true"
+            url="https://www.tassos.gr/joomla-extensions/convert-forms/docs/sync-leads-with-hubspot"
+            urltext="PLG_CONVERTFORMS_HUBSPOT_FIND_API_KEY"
+        />
+    </fieldset>
+</form>

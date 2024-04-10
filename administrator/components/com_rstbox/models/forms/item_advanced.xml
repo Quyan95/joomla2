@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="advanced">
+        <field name="customcode" type="textarea"
+            hint="&lt;script&gt; Your code here &lt;/script&gt;"
+            label="COM_RSTBOX_ITEM_CUSTOMCODE" filter="raw"
+            description="COM_RSTBOX_ITEM_CUSTOMCODE_DESC"
+            rows="10"
+            class="span12 input-full"
+        />
+        <field name="customcss" type="textarea"
+            hint=".eb-1 { margin-left:10px; }"
+            label="COM_RSTBOX_ITEM_CUSTOMCSS"
+            description="COM_RSTBOX_ITEM_CUSTOMCSS_DESC"
+            rows="10"
+            class="span12 input-full"
+        />
+        <field name="rtl" type="list"
+            label="NR_RTL"
+            description="NR_RTL_DESC"
+            default="2">
+            <option value="2">NR_USEGLOBAL</option>
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        <field name="preventpagescroll" type="list"
+            default="2"
+            label="COM_RSTBOX_PREVENT_PAGE_SCROLL" 
+            description="COM_RSTBOX_PREVENT_PAGE_SCROLL_DESC">
+            <option value="2">NR_USEGLOBAL</option>
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        
+        
+        <field name="stats" type="list"
+            default=""
+            label="COM_RSTBOX_STATS"
+            description="COM_RSTBOX_STATS_DESC">
+            <option value="">NR_USEGLOBAL</option>
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="assign_offline" type="list"
+            default=""
+            label="COM_RSTBOX_ASSIGN_OFFLINE"
+            description="COM_RSTBOX_ASSIGN_OFFLINE_DESC">
+            <option value="">NR_USEGLOBAL</option>
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="classsuffix" type="text" 
+            label="COM_RSTBOX_ITEM_CLASSSUFFIX"
+            description="COM_RSTBOX_ITEM_CLASSSUFFIX_DESC"
+        /> 
+        <field name="zindex" type="nrnumber" 
+            label="COM_RSTBOX_ITEM_ZINDEX"
+            description="COM_RSTBOX_ITEM_ZINDEX_DESC"
+            hint="99999"
+            step="1000"
+        /> 
+    </fieldset>
+</form>

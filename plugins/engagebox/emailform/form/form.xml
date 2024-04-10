@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="emailform">
+        <field name="blockStart" type="nr_well"
+			label="PLG_ENGAGEBOX_EMAILFORM_ALIAS"
+			description="PLG_ENGAGEBOX_EMAILFORM_DESC"
+        />
+        <field name="mc_url" type="url" 
+            class="input-xxlarge" 
+            label="COM_RSTBOX_ITEM_EMAIL_URL" 
+            description="COM_RSTBOX_ITEM_EMAIL_URL_DESC"
+            hint="http://"
+            size="40" 
+        />
+        <field name="formtarget" type="list" 
+            label="COM_RSTBOX_FORMACTION"
+            default="_self"
+            class="btn-group btn-group-yesno" 
+            description="COM_RSTBOX_FORMACTION_DESC">
+                <option value="_self">Self</option>
+                <option value="_blank">Blank</option>
+        </field>
+        <field name="mc_showlabels" type="list" 
+            default="1" 
+            label="COM_RSTBOX_ITEM_LABELS_STYLE" 
+            description="COM_RSTBOX_ITEM_LABELS_STYLE">
+                <option value="0">COM_RSTBOX_ITEM_LABELS_STYLE_NORMAL</option>
+                <option value="1">COM_RSTBOX_ITEM_LABELS_STYLE_PLACEHOLDER</option>
+                <option value="2">COM_RSTBOX_ITEM_LABELS_STYLE_BOTH</option>
+        </field>
+        <field name="formorient" type="list" 
+            default="ver" 
+            label="NR_FORM_ORIENTATION" 
+            description="NR_FORM_ORIENTATION_DESC">
+                <option value="ver">NR_VERTICAL</option>
+                <option value="hor">NR_HORIZONTAL</option>
+        </field>
+        <field name="blockEnd" type="nr_well"
+            end="1"
+        />
+        <field name="blockFieldsStart" type="nr_well"
+            label="PLG_ENGAGEBOX_EMAILFORM_FIELDS"
+            description="PLG_ENGAGEBOX_EMAILFORM_FIELDS_DESC"
+        />
+        <field type="spacer" name="merge00" label="COM_RSTBOX_ITEM_FIELD_EMAIL" class="h3" />
+        <field name="mc_email_namefield" 
+            label="COM_RSTBOX_ITEM_FIELD_NAME"
+            size="40"
+            default="email"
+        />
+        <field name="mc_email_name" 
+            label="COM_RSTBOX_ITEM_FIELD_LABEL"
+            size="40"
+            default="Email address"
+        />
+        <field type="spacer" name="merge1" label="COM_RSTBOX_ITEM_FIELD1" class="h3" />
+        <field name="mc_merge1_active" type="nrtoggle" 
+            label="COM_RSTBOX_ITEM_FIELD_ACTIVE"
+        />
+        <field name="mc_merge1_required" type="nrtoggle" 
+            label="COM_RSTBOX_ITEM_FIELD_REQUIRED"
+            showon="mc_merge1_active:1"
+        />
+        <field name="mc_merge1_type" type="list" 
+            default="0" 
+            showon="mc_merge1_active:1"
+            label="COM_RSTBOX_ITEM_FIELD_TYPE">
+            <option value="text">COM_RSTBOX_ITEM_FIELD_TYPE_TEXT</option>
+            <option value="checkbox">COM_RSTBOX_ITEM_FIELD_TYPE_CHECKBOX</option>
+            <option value="hidden">COM_RSTBOX_ITEM_FIELD_TYPE_HIDDEN</option>
+        </field>
+        <field name="mc_merge1_name" 
+            showon="mc_merge1_active:1"
+            label="COM_RSTBOX_ITEM_FIELD_NAME"
+            size="40"
+        />
+        <field name="mc_merge1_label" type="text"
+            showon="mc_merge1_active:1"
+            label="COM_RSTBOX_ITEM_FIELD_LABEL" 
+            size="40"
+        />
+        <field name="mc_merge1_value" 
+            showon="mc_merge1_active:1"
+            label="COM_RSTBOX_ITEM_FIELD_VALUE" 
+            size="40"
+        />
+        <field type="spacer" name="merge2" label="COM_RSTBOX_ITEM_FIELD2" class="h3" />
+        <field name="mc_merge2_active" type="nrtoggle" 
+            label="COM_RSTBOX_ITEM_FIELD_ACTIVE" 
+        />
+        <field name="mc_merge2_required" type="nrtoggle" 
+            label="COM_RSTBOX_ITEM_FIELD_REQUIRED" 
+            showon="mc_merge2_active:1"
+        />
+        <field name="mc_merge2_type" type="list" 
+            showon="mc_merge2_active:1"            
+            default="0" 
+            label="COM_RSTBOX_ITEM_FIELD_TYPE">
+            <option value="text">COM_RSTBOX_ITEM_FIELD_TYPE_TEXT</option>
+            <option value="checkbox">COM_RSTBOX_ITEM_FIELD_TYPE_CHECKBOX</option>
+            <option value="hidden">COM_RSTBOX_ITEM_FIELD_TYPE_HIDDEN</option>
+        </field>
+        <field name="mc_merge2_name" 
+            showon="mc_merge2_active:1"
+            label="COM_RSTBOX_ITEM_FIELD_NAME"
+            size="40"
+        />
+        <field name="mc_merge2_label" type="text"
+            showon="mc_merge2_active:1"
+            label="COM_RSTBOX_ITEM_FIELD_LABEL" 
+            size="40"
+        />
+        <field name="mc_merge2_value" 
+            showon="mc_merge2_active:1"
+            label="COM_RSTBOX_ITEM_FIELD_VALUE" 
+            size="40"
+        />
+        <field name="blockFieldsEnd" type="nr_well"
+            end="1"
+        />
+        <field name="blockButtonStart" type="nr_well"
+            label="PLG_ENGAGEBOX_EMAILFORM_BUTTON"
+            description="PLG_ENGAGEBOX_EMAILFORM_BUTTON_DESC"
+        />
+        <field name="mc_submit" type="text"
+            default="Sign up" 
+            label="COM_RSTBOX_ITEM_FIELD_LABEL" 
+        />
+        <field name="mc_submit_bg" type="color"
+            format="rgba"
+            keywords="none, transparent"
+            default="rgba(93, 183, 93, 1)" 
+            label="NR_BACKGROUND_COLOR"
+            description="NR_BACKGROUND_COLOR_DESC"
+        />
+        <field name="mc_submit_color" type="color"
+            format="rgb"
+            default="rgba(255, 255, 255, 1)" 
+            label="NR_TEXT_COLOR"
+            description="NR_COLOR_DESC"
+        />
+        <field name="mc_submit_set_cookie" type="nrtoggle" 
+            label="COM_RSTBOX_SUBMIT_COOKIE" 
+            description="COM_RSTBOX_SUBMIT_COOKIE_DESC" 
+            checked="true"
+        />
+        <field name="blockButtonEnd" type="nr_well"
+            end="1"
+        />
+        <field name="blockTextStart" type="nr_well"
+            label="COM_RSTBOX_TEXT"
+            description="COM_RSTBOX_TEXT_DESC"
+        />
+        <field name="mc_header" type="editor"
+            filter="raw"
+            label="COM_RSTBOX_TEXT"
+            buttons="true"
+            description="COM_RSTBOX_TEXT_DESC"
+        />
+        <field name="blockTextEnd" type="nr_well"
+            end="1"
+        />
+    </fieldset>
+</form>

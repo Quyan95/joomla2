@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="restrictions">
+        <field name="readonly" type="nrtoggle" 
+            label="COM_CONVERTFORMS_READONLY"
+            description="COM_CONVERTFORMS_READONLY_DESC"
+		/>
+    </fieldset>
+	<fieldset name="advanced">
+	    <field name="value" type="color"
+	    	label="COM_CONVERTFORMS_FIELD_VALUE"
+	    	description="COM_CONVERTFORMS_FIELD_VALUE_DESC"
+	    	class="span12"
+	    />
+    </fieldset>
+</form>

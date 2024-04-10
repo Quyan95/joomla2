@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="service">
+        <field name="organizationID" type="nrtext"
+            label="PLG_CONVERTFORMS_SALESFORCE_ORGANIZATION_ID"
+            description="PLG_CONVERTFORMS_SALESFORCE_ORGANIZATION_ID_DESC"
+            class="input-xlarge"
+            required="true"
+            url="https://www.tassos.gr/joomla-extensions/convert-forms/docs/sync-leads-with-salesforce"
+            urltext="PLG_CONVERTFORMS_SALESFORCE_FIND_ORGANIZATION_ID"
+        />
+    </fieldset>
+</form>

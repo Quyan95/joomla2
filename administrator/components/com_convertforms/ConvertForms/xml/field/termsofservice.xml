@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="basic">
+        <field name="terms_text" type="textarea" 
+            label="COM_CONVERTFORMS_FIELD_TERMSOFSERVICE_TEXT_LABEL"
+            description="COM_CONVERTFORMS_FIELD_TERMSOFSERVICE_TEXT_LABEL_DESC"
+            default="I agree with the terms of service"
+            class="editorx show-smart-tags"
+        />
+    </fieldset>
+</form>

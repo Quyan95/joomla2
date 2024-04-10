@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="service">
+        <field name="version" type="radio"
+            label="PLG_CONVERTFORMS_SENDINBLUE_VERSION"
+            description="PLG_CONVERTFORMS_SENDINBLUE_VERSION_DESC"
+            class="btn-group btn-group-yesno"
+            default="3">
+            <option value="3">v3</option>
+            <option value="2">v2</option>
+        </field>
+        <field name="v2_deprecation_notice" type="note"
+            label="PLG_CONVERTFORMS_SENDINBLUE_V2_DEPRECATION"
+            description="PLG_CONVERTFORMS_SENDINBLUE_V2_DEPRECATION_DESC"
+            class="alert alert-danger"
+            showon="version:2"
+        />
+        <field name="api" type="nrtext"
+            label="PLG_CONVERTFORMS_SENDINBLUE_KEY"
+            description="PLG_CONVERTFORMS_SENDINBLUE_KEY_DESC"
+            class="input-xlarge"
+            required="true"
+            url="https://www.tassos.gr/joomla-extensions/convert-forms/docs/sync-leads-with-sendinblue"
+            urltext="PLG_CONVERTFORMS_SENDINBLUE_FIND_API_KEY"
+        />
+        <field name="list" type="servicelists"
+            label="PLG_CONVERTFORMS_SENDINBLUE_LIST_ID"
+            description="PLG_CONVERTFORMS_SENDINBLUE_LIST_ID_DESC"
+            class="input-xlarge"
+            required="true"
+        />
+        <field name="updateexisting" type="nrtoggle"
+            label="PLG_CONVERTFORMS_SENDINBLUE_UPDATE_EXISTING_USER"
+            description="PLG_CONVERTFORMS_SENDINBLUE_UPDATE_EXISTING_USER_DESC"
+            checked="true"
+            showon="version:3"
+        />
+    </fieldset>
+</form>

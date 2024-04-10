@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="basic">
+        <field name="display" type="list" 
+            label="Display Type"
+            default="1">
+            	<option value="1">COM_CONVERTFORMS_CURRENCY_NAME</option>
+            	<option value="2">COM_CONVERTFORMS_CURRENCY_CODE</option>
+            	<option value="3">NR_BOTH</option>
+        </field>
+    </fieldset>
+</form>

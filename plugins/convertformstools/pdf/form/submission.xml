@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="main" addfieldpath="plugins/convertformstools/pdf/fields">
+		<fields name="pdf">
+            <field name="pdf" type="pdfsubmission" 
+                label="PLG_CONVERTFORMSTOOLS_PDF_SUBMISSION"
+            />
+        </fields>
+    </fieldset>
+</form>

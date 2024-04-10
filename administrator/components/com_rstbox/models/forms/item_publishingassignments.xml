@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="display_conditions">
+        
+        
+        <field name="display_conditions_type" type="radio" 
+            label="COM_RSTBOX_DISPLAY_POPUP" 
+            description="COM_RSTBOX_DISPLAY_CONDITIONS_TYPE_DESC"
+            class="btn-group">
+                <option value="">COM_RSTBOX_DISPLAY_CONDITIONS_TYPE_ALL_PAGES</option>
+                <option value="mirror">COM_RSTBOX_DISPLAY_CONDITIONS_TYPE_MIRROR</option>
+                <option value="custom">COM_RSTBOX_DISPLAY_CONDITIONS_TYPE_CUSTOM</option>
+        </field>
+        <field name="mirror_box" type="boxes"
+            label="COM_RSTBOX_POPUP"
+            description="COM_RSTBOX_MIRROR_ASSIGNMENTS_BOX_DESC"
+            excludeeditingbox="true"
+            showon="display_conditions_type:mirror"
+        />
+        
+        
+        
+        <field name="rules" type="ConditionBuilder"
+            label="NR_PUBLISHING_ASSIGNMENTS"
+            description="COM_ENGAGEBOX_PUBLISHING_RULES_DESC"
+            hiddenLabel="true"
+            showon="display_conditions_type:custom"
+        />
+        
+    </fieldset>
+</form>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="service">
+        <field name="authcode" type="nrtext"
+            label="PLG_CONVERTFORMS_AWEBER_AUTH_CODE"
+            description="PLG_CONVERTFORMS_AWEBER_AUTH_CODE_DESC"
+            class="input-xlarge"
+            required="true"
+            url="https://auth.aweber.com/1.0/oauth/authorize_app/7b524f01"
+            urltext="PLG_CONVERTFORMS_AWEBER_FIND_AUTH_CODE"
+            urlpopup="true"
+        />
+        <field name="uniquelistid" type="nrtext"
+            label="PLG_CONVERTFORMS_AWEBER_UNIQUE_LIST_ID"
+            description="PLG_CONVERTFORMS_AWEBER_UNIQUE_LIST_ID_DESC"
+            class="input-xlarge"
+            required="true"
+            url="https://www.tassos.gr/joomla-extensions/convert-forms/docs/sync-leads-with-aweber#campaign"
+            urltext="PLG_CONVERTFORMS_AWEBER_FIND_UNIQUE_LIST_ID"
+        />
+        <field name="updateexisting" type="radio"
+            label="PLG_CONVERTFORMS_AWEBER_UPDATE_EXISTING_USER"
+            description="PLG_CONVERTFORMS_AWEBER_UPDATE_EXISTING_USER_DESC"
+            class="btn-group btn-group-yesno"
+            default="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="optinnote" type="note" 
+            description="PLG_CONVERTFORMS_AWEBER_SINGLE_OPTIN_DESC"
+        />
+        <field name="consumerKey" type="hidden" default="" />
+        <field name="consumerSecret" type="hidden" default="" />
+        <field name="accessToken" type="hidden" default="" />
+        <field name="accessSecret" type="hidden" default="" />
+    </fieldset>
+</form>

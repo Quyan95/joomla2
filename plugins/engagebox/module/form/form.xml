@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="module" addfieldpath="plugins/engagebox/module/form/fields">
+        <field name="blockStart" type="nr_well"
+			label="PLG_ENGAGEBOX_MODULE_ALIAS"
+			description="PLG_ENGAGEBOX_MODULE_DESC"
+        />
+        <field name="moduleid" type="ebmodules"
+            label="COM_RSTBOX_ITEM_MODULEID"
+            description="COM_RSTBOX_ITEM_MODULEID_DESC"
+            showselect="false"
+            client="0"
+        />   
+        <field name="modulepretext" type="editor"
+        	label="COM_RSTBOX_TEXT" 
+            description="COM_RSTBOX_TEXT_DESC"
+            rows="5" 
+            cols="40" 
+            buttons="true"
+            filter="raw" 
+        />
+        <field name="blockEnd" type="nr_well"
+			end="1"
+        />
+    </fieldset>
+</form>

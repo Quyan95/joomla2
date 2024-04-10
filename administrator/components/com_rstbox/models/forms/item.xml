@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="top">
+        <field name="name" type="text" 
+            class="input-large-text"
+            label="NR_TITLE"
+            required="true"
+            hint="Enter title"
+        />  
+    </fieldset>
+    <fieldset name="general" addfieldpath="administrator/components/com_rstbox/models/forms/fields">
+        
+        
+        <field name="boxtype" type="boxtypes" 
+            default="custom" 
+            label="COM_RSTBOX_ITEM_TYPE"
+            description="COM_RSTBOX_ITEM_TYPE_DESC"
+            onchange="EBReloadForm(this)"
+        />
+        <field name="mode" type="list"
+            label="COM_RSTBOX_BOX_MODE" 
+            description="COM_RSTBOX_BOX_MODE_DESC"
+            default="popup">
+            <option value="popup">COM_RSTBOX_POPUP</option>
+            <option value="pageslide">COM_RSTBOX_PAGESLIDE</option>
+        </field>
+        
+        <field name="published" type="nrtoggle" 
+            label="JENABLED"
+            checked="true"
+        /> 
+        <field name="showtitle" type="nrtoggle" 
+            label="COM_RSTBOX_ITEM_SHOWTITLE" 
+            description="COM_RSTBOX_ITEM_SHOWTITLE_DESC"
+            checked="true"
+        />
+        <field name="testmode" type="nrtoggle" 
+            label="COM_RSTBOX_ITEM_TESTMODE" 
+            description="COM_RSTBOX_ITEM_TESTMODE_DESC"
+        /> 
+        <field name="note" type="textarea" 
+            label="COM_RSTBOX_ITEM_NOTE" 
+            description="COM_RSTBOX_ITEM_NOTE_DESC"
+        />
+        <field name="colorgroup" type="color" 
+            default="transparent"
+            label="NR_COLOR"
+            description="COM_RSTBOX_ITEM_COLORGROUP_DESC"
+            control="simple"
+            split="4"
+        />
+        <field name="id" type="hidden" />
+    </fieldset>
+</form>

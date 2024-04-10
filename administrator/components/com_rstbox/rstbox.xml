@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="component" method="upgrade">
+    <name>COM_RSTBOX</name>
+    <description>COM_RSTBOX_DESC</description>
+    <version>6.1.4</version>
+    <creationDate>August 2014</creationDate>
+    <author>Tassos Marinos</author>
+    <authorEmail>info@tassos.gr</authorEmail>
+    <authorUrl>http://www.tassos.gr</authorUrl>
+    <copyright>Copyright © 2020 Tassos Marinos All Rights Reserved</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <scriptfile>script.install.php</scriptfile>
+    <install><sql><file driver="mysql" charset="utf8">sql/rstbox.sql</file></sql></install>
+    <uninstall><sql><file driver="mysql" charset="utf8">sql/uninstall.rstbox.sql</file></sql></uninstall>
+    <update><schemas><schemapath type="mysql">sql/updates/mysql</schemapath></schemas></update>
+    <updateservers>
+        <server type="extension" priority="1" name="EngageBox">
+            https://www.tassos.gr/updates/engagebox-pro.xml
+        </server>
+    </updateservers>
+    <administration>
+        <menu link="option=com_rstbox">COM_RSTBOX</menu>
+        <files>
+            <folder>EngageBox</folder>
+            <folder>controllers</folder>
+            <folder>language</folder>
+            <folder>layouts</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>rstbox.php</filename>
+            <filename>script.install.helper.php</filename>
+            <filename>autoload.php</filename>
+            <filename>version.php</filename>
+        </files>
+    </administration>
+    <media folder="media" destination="com_rstbox">
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>img</folder>
+    </media>
+
+    <!-- Watchful -->
+    <variant>pro</variant>
+</extension>

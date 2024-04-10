@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="custom">
+        <field name="customhtml" type="editor" 
+            label="COM_RSTBOX_TEXT" 
+            description="COM_RSTBOX_TEXT_DESC"
+            rows="5" 
+            cols="40" 
+            filter="raw"
+            buttons="true"
+            hiddenLabel="true"
+        />
+    </fieldset>
+</form>

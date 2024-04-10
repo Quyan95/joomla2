@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="iframe">
+        <field name="blockStart" type="nr_well"
+            label="PLG_ENGAGEBOX_IFRAME_ALIAS"
+            description="PLG_ENGAGEBOX_IFRAME_DESC"
+        />
+        <field name="iframeurl" type="text"
+            label="COM_RSTBOX_IFRAMEURL"
+            class="input-xxlarge"
+            description="COM_RSTBOX_IFRAMEURL_DESC"
+            hint="http://"
+        />
+        <field name="iframeheight" type="text" 
+            default="500px" 
+            class="input-small" 
+            label="NR_HEIGHT"
+            description="NR_HEIGHT_DESC"
+        />
+        <field name="iframescrolling" type="list" 
+            default="auto" 
+            label="COM_RSTBOX_IFRAME_SCROLLING"
+            description="COM_RSTBOX_IFRAME_SCROLLING_DESC">
+            <option value="yes">JYES</option>
+            <option value="no">JNO</option>
+            <option value="auto">Auto</option>
+        </field>
+        <field name="iframeparams" type="text"
+            label="COM_RSTBOX_IFRAMEPARAMS"
+            description="COM_RSTBOX_IFRAMEPARAMS_DESC"
+        />
+        <field name="blockStartEnd" type="nr_well"
+            end="1"
+        />
+        <field name="blockStart2" type="nr_well"
+            label="COM_RSTBOX_BOX_BEHAVIOR"
+            description="COM_RSTBOX_BOX_BEHAVIOR_DESC"
+        />
+        <field name="iframeasync" type="list" 
+            label="COM_RSTBOX_ASYNC"
+            default="afterOpen"
+            description="COM_RSTBOX_ASYNC_DESC">
+                <option value="dom">Disable</option>
+                <option value="beforeOpen">Before Box Open</option>
+                <option value="afterOpen">After Box Open</option>
+                <option value="pageLoad">on Page Load</option>
+        </field>
+        <field name="removeonclose" type="nrtoggle" 
+            label="COM_RSTBOX_IFRAME_REMOVE_ON_CLOSE"
+            description="COM_RSTBOX_IFRAME_REMOVE_ON_CLOSE_DESC"
+        />
+        <field name="blockStartEnd2" type="nr_well"
+            end="1"
+        />
+        <field name="blockStart3" type="nr_well"
+            label="COM_RSTBOX_TEXT"
+            description="COM_RSTBOX_TEXT_DESC"
+        />
+        <field name="iframeheader" type="editor"
+            filter="raw"
+            label="COM_RSTBOX_TEXT"
+            buttons="true"
+            description="COM_RSTBOX_TEXT_DESC"
+        />
+        <field name="blockStartEnd3" type="nr_well"
+            end="1"
+        />
+    </fieldset>
+</form>

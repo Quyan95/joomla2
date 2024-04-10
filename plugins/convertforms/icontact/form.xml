@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="service">
+        <field name="appID" type="nrtext"
+            label="PLG_CONVERTFORMS_ICONTACT_APP_ID"
+            description="PLG_CONVERTFORMS_ICONTACT_APP_ID_DESC"
+            class="input-xlarge"
+            required="true"
+            url="https://www.tassos.gr/joomla-extensions/convert-forms/docs/sync-leads-with-icontact"
+            urltext="PLG_CONVERTFORMS_ICONTACT_FIND_APP_ID"
+        />
+        <field name="username" type="nrtext"
+            label="PLG_CONVERTFORMS_ICONTACT_USERNAME"
+            description="PLG_CONVERTFORMS_ICONTACT_USERNAME_DESC"
+            class="input-xlarge"
+            required="true"
+        />
+        <field name="appPassword" type="nrtext"
+            label="PLG_CONVERTFORMS_ICONTACT_APP_PASS"
+            description="PLG_CONVERTFORMS_ICONTACT_APP_PASS_DESC"
+            class="input-xlarge"
+            required="true"
+            url="https://www.tassos.gr/joomla-extensions/convert-forms/docs/sync-leads-with-icontact"
+            urltext="PLG_CONVERTFORMS_ICONTACT_FIND_APP_PASS"
+        />
+        <field name="list" type="servicelists"
+            label="PLG_CONVERTFORMS_ICONTACT_LIST_ID"
+            description="PLG_CONVERTFORMS_ICONTACT_LIST_ID_DESC"
+            class="input-xlarge"
+            required="true"
+        />
+        <field name="accountID" type="hidden" default="" />
+        <field name="clientFolderID" type="hidden" default="" />
+    </fieldset>
+</form>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="appearance">
+        <field type="TFGlobalDevicesSelector" hiddenLabel="true" />
+        <field name="position" type="NRResponsiveControl"
+            label="COM_RSTBOX_ITEM_BOX_POSITION"
+            description="COM_RSTBOX_ITEM_BOX_POSITION_DESC"
+            default='{"desktop":{"value":"center"}}'
+            subtype="list"
+            subtype_options='{"":"NR_INHERIT", "top-left": "COM_RSTBOX_ITEM_BOX_POSITION_TOPLEFT", "top-center": "COM_RSTBOX_ITEM_BOX_POSITION_TOPCENTER", "top-right": "COM_RSTBOX_ITEM_BOX_POSITION_TOPRIGHT", "middle-left": "COM_RSTBOX_ITEM_BOX_POSITION_MIDDLELEFT", "center": "COM_RSTBOX_ITEM_BOX_POSITION_CENTER", "middle-right": "COM_RSTBOX_ITEM_BOX_POSITION_MIDDLERIGHT", "bottom-left": "COM_RSTBOX_ITEM_BOX_POSITION_BOTTOMLEFT", "bottom-center": "COM_RSTBOX_ITEM_BOX_POSITION_BOTTOMCENTER", "bottom-right": "COM_RSTBOX_ITEM_BOX_POSITION_BOTTOMRIGHT"}'
+            subtype_layout="joomla.form.field.list-fancy-select"
+            hide_device_selector="true"
+        />
+        <field name="width" type="NRResponsiveControl"
+            label="NR_WIDTH"
+            description="COM_RSTBOX_ITEM_WIDTH_DESC"
+            default='{"desktop":{"value":"500","unit":"px"}}'
+            subtype="TFUnitControl"
+            subtype_hint="500"
+            hide_device_selector="true"
+        />
+        <field name="height" type="NRResponsiveControl"
+            label="NR_HEIGHT"
+            description="COM_RSTBOX_ITEM_HEIGHT_DESC"
+            default='{"desktop":{"value":"", "unit":"auto"}, "tablet":{"value":"", "unit":"auto"}, "mobile":{"value":"", "unit":"auto"}}'
+            subtype="TFUnitControl"
+            subtype_hint="400"
+            subtype_units="px,%,auto"
+            hide_device_selector="true"
+        />
+        <field name="padding" type="NRResponsiveControl"
+            label="NR_PADDING" 
+            description="COM_RSTBOX_POPUP_PADDING_DESC"
+            default='{"desktop":{"top":"30","right":"30","bottom":"30","left":"30","unit":"px"}}'
+            subtype="TFDimensionControl"
+            hide_device_selector="true"
+        />
+        <field name="margin" type="NRResponsiveControl"
+            label="NR_MARGIN" 
+            description="COM_RSTBOX_POPUP_MARGIN_DESC"
+            subtype="TFDimensionControl"
+            hide_device_selector="true"
+        />
+        <field name="textcolor" type="NRResponsiveControl"
+            label="NR_TEXT_COLOR"
+            description="COM_RSTBOX_TEXT_COLOR_DESC"
+            default='{"desktop":{"value":"rgba(51, 51, 51, 1)"}}'
+            subtype="color"
+            subtype_format="rgba"
+            hide_device_selector="true"
+        />
+        <field name="backgroundcolor" type="NRResponsiveControl"
+            label="NR_BACKGROUND_COLOR"
+            description="COM_RSTBOX_BG_COLOR_DESC"
+            default='{"desktop":{"value":"rgba(255, 255, 255, 1)"}}'
+            subtype="color"
+            subtype_format="rgba"
+            hide_device_selector="true"
+        />
+        <field name="aligncontent" type="NRResponsiveControl"
+            label="COM_RSTBOX_ALIGN_CONTENT"
+            description="COM_RSTBOX_ALIGN_CONTENT_DESC"
+            default='{"desktop":{"value":""}}'
+            subtype="list"
+            subtype_options='{"": "NR_INHERIT", "act acl":"Top Left", "act acc": "Top Center", "act acr": "Top Right", "acm acl": "Middle Left", "acm acc": "Middle Center", "acm acr": "Middle Right", "acb acl": "Bottom Left", "acb acc": "Bottom Center", "acb acr": "Bottom Right"}'
+            subtype_layout="joomla.form.field.list-fancy-select"
+            hide_device_selector="true"
+        />
+        <field name="boxshadow" type="NRResponsiveControl"
+            label="COM_RSTBOX_ITEM_BOXSHADOW"
+            description="COM_RSTBOX_ITEM_BOXSHADOW_DESC"
+            default='{"desktop":{"value":""}}'
+            subtype="list"
+            subtype_options='{"":"NR_INHERIT", "none": "NR_NONE", "1": "Style 1", "2": "Style 2", "3": "Style 3", "elevation": "Elevation"}'
+            subtype_layout="joomla.form.field.list-fancy-select"
+            hide_device_selector="true"
+        />
+        <field type="spacer" class="h2" name="rstbox-spacer-line-border" label="COM_RSTBOX_BORDER"/>
+        <field name="bordertype" type="NRResponsiveControl"
+            label="COM_RSTBOX_ITEM_BORDERSTYLE"
+            description="COM_RSTBOX_ITEM_BORDERSTYLE_DESC"
+            default='{"desktop":{"value":"solid"}}'
+            subtype="list"
+            subtype_options='{"": "NR_INHERIT", "none": "None", "solid": "Solid", "dotted": "Dotted", "double": "Double", "dashed": "Dashed", "inset": "Inset", "outset": "Outset", "groove": "Groove", "ridge": "Ridge", "hidden": "Hidden"}'
+            subtype_layout="joomla.form.field.list-fancy-select"
+            hide_device_selector="true"
+        />
+        <field name="bordercolor" type="NRResponsiveControl"
+            label="NR_COLOR"
+            description="NR_COLOR_DESC"
+            default='{"desktop":{"value":"rgba(0, 0, 0, 0.4)"}}'
+            subtype="color"
+            subtype_format="rgba"
+            hide_device_selector="true"
+            showon="bordertype{breakpoint}!:none,"
+        />
+        <field name="borderwidth" type="NRResponsiveControl"
+            label="NR_WIDTH"
+            description="COM_RSTBOX_ITEM_BORDERWIDTH_DESC"
+            default='{"desktop":{"value":"1"}}'
+            subtype="TFUnitControl"
+            subtype_hint="1"
+            subtype_units="px"
+            hide_device_selector="true"
+            showon="bordertype{breakpoint}!:none,"
+        />
+        <field name="borderradius" type="NRResponsiveControl"
+            label="COM_RSTBOX_ITEM_BORDERRADIUS"
+            description="COM_RSTBOX_ITEM_BORDERRADIUS_DESC"
+            subtype="TFBorderRadiusControl"
+            hide_device_selector="true"
+        />
+        <field type="spacer" class="h2" name="rstbox-spacer-background-overlay" label="COM_RSTBOX_ITEM_OVERLAY"/>
+        
+        <field name="overlay" type="NRResponsiveControl"
+            label="COM_RSTBOX_ITEM_OVERLAY"
+            description="COM_RSTBOX_ITEM_OVERLAY_DESC"
+            default='{"desktop":{"value":"0"},"tablet":{"value":"inherit"},"mobile":{"value":"inherit"}}'
+            subtype="list"
+            subtype_options='{"inherit": "NR_INHERIT", "1": "Enabled", "0": "Disabled"}'
+            subtype_layout="joomla.form.field.list-fancy-select"
+            hide_device_selector="true"
+        />
+        <field name="overlay_color" type="NRResponsiveControl"
+            label="NR_COLOR"
+            description="COM_RSTBOX_OVERLAY_COLOR_DESC"
+            default='{"desktop":{"value":"rgba(0, 0, 0, 0.5)"}}'
+            subtype="color"
+            subtype_format="rgba"
+            hide_device_selector="true"
+            showon="overlay{breakpoint}:1"
+        />
+        <field name="blur_bg" type="NRResponsiveControl"
+            label="COM_RSTBOX_BG_BLUR"
+            description="COM_RSTBOX_BG_BLUR_DESC"
+            default='{"desktop":{"value": 0}}'
+            subtype="TFUnitControl"
+            subtype_hint="1"
+            subtype_units="%"
+            subtype_min="0"
+            subtype_max="100"
+            hide_device_selector="true"
+            showon="overlay{breakpoint}:1"
+        />
+        <field name="overlayclick" type="NRResponsiveControl"
+            label="COM_RSTBOX_ITEM_OVERLAY_CLICK"
+            description="COM_RSTBOX_ITEM_OVERLAY_CLICK_DESC"
+            subtype="nrtoggle"
+            subtype_checked="true"
+            hide_device_selector="true"
+            showon="overlay{breakpoint}:1"
+        />
+        
+        
+        
+        <field type="spacer" class="h2" name="rstbox-spacer-line-bg-image" label="NR_BGIMAGE"/>
+        
+        <field name="bgimage" type="NRResponsiveControl"
+            label="NR_BGIMAGE"
+            description="COM_RSTBOX_BGIMAGE_DESC"
+            default='{"desktop":{"value":"0"},"tablet":{"value":"inherit"},"mobile":{"value":"inherit"}}'
+            subtype="list"
+            subtype_options='{"inherit": "NR_INHERIT", "1": "Enabled", "0": "Disabled"}'
+            subtype_layout="joomla.form.field.list-fancy-select"
+            hide_device_selector="true"
+        />
+        <field name="bgimagefile" type="NRResponsiveControl"
+            label="NR_BGIMAGE_FILE"
+            description="NR_BGIMAGE_FILE_DESC"
+            subtype="media"
+            hide_device_selector="true"
+            showon="bgimage{breakpoint}:1"
+        />
+        <field name="bgrepeat" type="NRResponsiveControl"
+            label="NR_BGIMAGE_REPEAT"
+            description="NR_BGIMAGE_REPEAT_DESC"
+            default='{"desktop":{"value":"Repeat"}}'
+            subtype="list"
+            subtype_options='{"": "NR_INHERIT", "No-repeat": "No-repeat", "Repeat": "Repeat", "Repeat-x": "Repeat-x", "Repeat-y": "Repeat-y"}'
+            subtype_layout="joomla.form.field.list-fancy-select"
+            hide_device_selector="true"
+            showon="bgimage{breakpoint}:1"
+        />
+        <field name="bgsize" type="NRResponsiveControl"
+            label="NR_BGIMAGE_SIZE"
+            description="NR_BGIMAGE_SIZE_DESC"
+            default='{"desktop":{"value":"Auto"}}'
+            subtype="list"
+            subtype_options='{"": "NR_INHERIT", "Auto": "Auto", "Cover": "Cover", "Contain": "Contain", "100% 100%": "100% 100%"}'
+            subtype_layout="joomla.form.field.list-fancy-select"
+            hide_device_selector="true"
+            showon="bgimage{breakpoint}:1"
+        />
+        <field name="bgposition" type="NRResponsiveControl"
+            label="NR_BGIMAGE_POSITION"
+            description="NR_BGIMAGE_POSITION_DESC"
+            default='{"desktop":{"value":"Left Top"}}'
+            subtype="list"
+            subtype_options='{"": "NR_INHERIT", "Left Top": "Left Top", "Left Center": "Left Center", "Right Top": "Right Top", "Right Center": "Right Center", "Right Bottom": "Right Bottom", "Center Top": "Center Top", "Center Center": "Center Center", "Center Bottom": "Center Bottom"}'
+            subtype_layout="joomla.form.field.list-fancy-select"
+            hide_device_selector="true"
+            showon="bgimage{breakpoint}:1"
+        />
+        
+        
+
+        <field type="spacer" class="h2" name="rstbox-spacer-line-close-button" label="COM_RSTBOX_CLOSE_BUTTON"/>
+        <fields name="closebutton">
+            <field name="show" type="NRResponsiveControl"
+                label="COM_RSTBOX_CLOSE_BUTTON"
+                description="COM_RSTBOX_CLOSE_BUTTON_DESC"
+                default='{"desktop":{"value":"1"}}'
+                subtype="list"
+                subtype_options='{"": "NR_INHERIT", "1": "COM_ENGAGEBOX_CLOSEBUTTON_SHOW_INSIDE", "2": "COM_ENGAGEBOX_CLOSEBUTTON_SHOW_OUTSIDE", "0": "JHIDE"}'
+                subtype_layout="joomla.form.field.list-fancy-select"
+                hide_device_selector="true"
+            />
+            <field name="source" type="NRResponsiveControl"
+                label="COM_RSTBOX_CB_TYPE"
+                description="COM_RSTBOX_CB_TYPE_DESC"
+                default='{"desktop":{"value":"icon"}}'
+                subtype="list"
+                subtype_options='{"": "NR_INHERIT", "icon": "NR_ICON", "image": "NR_IMAGE"}'
+                subtype_layout="joomla.form.field.list-fancy-select"
+                hide_device_selector="true"
+                showon="show{breakpoint}:1,2"
+            />
+            <field name="color" type="NRResponsiveControl"
+                label="NR_COLOR"
+                description="NR_COLOR_DESC"
+                default='{"desktop":{"value":"rgba(136, 136, 136, 1)"}}'
+                subtype="color"
+                subtype_format="rgba"
+                hide_device_selector="true"
+                showon="source{breakpoint}:icon[AND]show{breakpoint}:1,2"
+            />
+            <field name="hover" type="NRResponsiveControl"
+                label="NR_COLOR_HOVER"
+                description="NR_COLOR_DESC"
+                default='{"desktop":{"value":"rgba(85, 85, 85, 1)"}}'
+                subtype="color"
+                subtype_format="rgba"
+                hide_device_selector="true"
+                showon="source{breakpoint}:icon[AND]show{breakpoint}:1,2"
+            />
+            <field name="size" type="NRResponsiveControl"
+                label="NR_FONT_SIZE"
+                description="COM_RSTBOX_CB_FONT_SIZE_DESC"
+                default='{"desktop":{"value":"30","unit":"px"}}'
+                subtype="TFUnitControl"
+                subtype_hint="30"
+                subtype_step="2"
+                subtype_units="px"
+                hide_device_selector="true"
+                showon="source{breakpoint}:icon[AND]show{breakpoint}:1,2"
+            />
+            <field name="image" type="NRResponsiveControl"
+                label="NR_IMAGE_SELECT"
+                description="COM_RSTBOX_CB_IMAGE_DESC"
+                subtype="media"
+                hide_device_selector="true"
+                showon="source{breakpoint}:image[AND]show{breakpoint}:1,2"
+            />
+            <field name="delay" type="NRResponsiveControl"
+                label="COM_RSTBOX_CB_DELAY"
+                description="COM_RSTBOX_CB_DELAY_DESC"
+                default='{"desktop":{"value":"0","unit":"ms"}}'
+                subtype="TFUnitControl"
+                subtype_hint="0"
+                subtype_units="ms"
+                hide_device_selector="true"
+                showon="show{breakpoint}:1,2"
+            />
+        </fields>
+    </fieldset>
+</form>

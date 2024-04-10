@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="yesno">
+        <fields name="yesno">
+            <field name="blockStart" type="nr_well"
+    			label="PLG_ENGAGEBOX_YESNO_ALIAS"
+    			description="PLG_ENGAGEBOX_YESNO_DESC"
+            />
+            <field name="headline" type="editor"
+                label="PLG_ENGAGEBOX_YESNO_HEADLINE" 
+                description="PLG_ENGAGEBOX_YESNO_HEADLINE_DESC"
+                hint="PLG_ENGAGEBOX_YESNO_HEADLINE_DESC"
+                filter="raw"
+            />
+            <field name="headlinesize" type="nrnumber"
+                label="PLG_ENGAGEBOX_YESNO_HEADLINE_FONT_SIZE" 
+                description="NR_FONT_SIZE_DESC"
+                addon="px"
+                default="22"
+                class="input-small"
+            />
+            <field name="headlinecolor" type="color"
+                label="PLG_ENGAGEBOX_YESNO_HEADLINE_FONT_COLOR"
+                description="NR_COLOR_DESC"
+                default="#888"
+            />
+            <field name="buttonwidth" type="nrnumber"
+                label="PLG_ENGAGEBOX_YESNO_BUTTON_MIN_SIZE" 
+                description="PLG_ENGAGEBOX_YESNO_BUTTON_MIN_SIZE_DESC"
+                addon="px"
+                default="100"
+                class="input-small"
+                step="10"
+            />
+           <field name="buttontextfontsize" type="nrnumber"
+                label="PLG_ENGAGEBOX_YESNO_BUTTON_FONT_SIZE" 
+                description="NR_FONT_SIZE_DESC"
+                addon="px"
+                default="16"
+                class="input-small"
+            />
+            <field name="blockEnd" type="nr_well"
+                end="1"
+            />
+            <fields name="yes">
+                <field name="blockStart" type="nr_well"
+                    label="PLG_ENGAGEBOX_YESNO_YESBUTTON"
+                    description="PLG_ENGAGEBOX_YESNO_YESBUTTON_DESC"
+                />
+                <field name="text" type="text"
+                    label="NR_TEXT" 
+                    description="PLG_ENGAGEBOX_YESNO_BUTTON_TEXT_DESC"
+                    hint="Yes"
+                    default="Yes"
+                />
+                <field name="subtext" type="text"
+                    label="PLG_ENGAGEBOX_YESNO_BUTTON_SUBTEXT" 
+                    description="PLG_ENGAGEBOX_YESNO_BUTTON_SUBTEXT_DESC"
+                />
+                <field name="background" type="color" 
+                    label="NR_BACKGROUND_COLOR"
+                    description="NR_BACKGROUND_COLOR_DESC"
+                    default="#2ec664"
+                    position="bottom"
+                />
+                <field name="color" type="color" 
+                    label="NR_TEXT_COLOR"
+                    description="NR_COLOR_DESC"
+                    position="bottom"
+                    default="#fff"
+                />
+                <field name="click" type="list" 
+                    label="PLG_ENGAGEBOX_YESNO_ONCLICK"
+                    description="PLG_ENGAGEBOX_YESNO_ONCLICK_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="url">
+                        <option value="url">PLG_ENGAGEBOX_YESNO_GOTOURL</option>
+                        <option value="open">PLG_ENGAGEBOX_YESNO_OPENBOX</option>
+                        <option value="close">PLG_ENGAGEBOX_YESNO_CLOSEBOX</option>
+                </field>
+                <field name="box" type="boxes"
+                    label="PLG_ENGAGEBOX_YESNO_BOX_LIST"
+                    description="PLG_ENGAGEBOX_YESNO_BOX_LIST_DESC"
+                    showon="click:open"
+                    excludeeditingbox="true"
+                />
+                <field name="url" type="url"
+                    label="NR_URL"
+                    description="PLG_ENGAGEBOX_YESNO_URL_DESC"
+                    class="input-xxlarge"
+                    showon="click:url"
+                    hint="http://"
+                />
+                <field name="newtab" type="nrtoggle"
+                    label="PLG_ENGAGEBOX_YESNO_OPEN_NEW_TAB"
+                    description="PLG_ENGAGEBOX_YESNO_OPEN_NEW_TAB_DESC"
+                    showon="click:url"
+                />
+                <field name="close" type="nrtoggle"
+                    label="PLG_ENGAGEBOX_YESNO_CLOSEBOX"
+                    description="PLG_ENGAGEBOX_YESNO_CLOSEBOX_DESC"
+                    checked="true"
+                    showon="click:url"/>
+                <field name="blockEnd" type="nr_well"
+                    end="1"
+                />
+            </fields>
+            <fields name="no">
+                <field name="blockStart" type="nr_well"
+                    label="PLG_ENGAGEBOX_YESNO_NOBUTTON"
+                    description="PLG_ENGAGEBOX_YESNO_NOBUTTON_DESC"
+                />
+                <field name="show" type="nrtoggle"
+                    label="JSHOW"
+                    checked="true"
+                />
+                <field name="text" type="text"
+                    label="NR_TEXT" 
+                    description="PLG_ENGAGEBOX_YESNO_BUTTON_TEXT_DESC"
+                    hint="No"
+                    default="No"
+                    showon="show:1"
+                />
+                <field name="subtext" type="text"
+                    label="PLG_ENGAGEBOX_YESNO_BUTTON_SUBTEXT" 
+                    description="PLG_ENGAGEBOX_YESNO_BUTTON_SUBTEXT_DESC"
+                    showon="show:1"
+                />
+                <field name="background" type="color" 
+                    label="NR_BACKGROUND_COLOR"
+                    description="NR_BACKGROUND_COLOR_DESC"
+                    default="#ef2345"
+                    position="bottom"
+                    showon="show:1"
+                />
+                <field name="color" type="color" 
+                    label="NR_TEXT_COLOR"
+                    description="NR_COLOR_DESC"
+                    position="bottom"
+                    default="#fff"
+                    showon="show:1"
+                />
+                <field name="click" type="list" 
+                    label="PLG_ENGAGEBOX_YESNO_ONCLICK"
+                    description="PLG_ENGAGEBOX_YESNO_ONCLICK_DESC"
+                    default="close"
+                    showon="show:1">
+                        <option value="url">PLG_ENGAGEBOX_YESNO_GOTOURL</option>
+                        <option value="open">PLG_ENGAGEBOX_YESNO_OPENBOX</option>
+                        <option value="close">PLG_ENGAGEBOX_YESNO_CLOSEBOX</option>
+                </field>
+                <field name="box" type="boxes"
+                    label="PLG_ENGAGEBOX_YESNO_BOX_LIST"
+                    description="PLG_ENGAGEBOX_YESNO_BOX_LIST_DESC"
+                    showon="click:open[AND]show:1"
+                    excludeeditingbox="true"
+                />
+                <field name="url" type="url"
+                    label="NR_URL"
+                    description="PLG_ENGAGEBOX_YESNO_URL_DESC"
+                    class="input-large"
+                    showon="click:url[AND]show:1"
+                    hint="http://"
+                />
+                <field name="newtab" type="radio"
+                    label="PLG_ENGAGEBOX_YESNO_OPEN_NEW_TAB"
+                    description="PLG_ENGAGEBOX_YESNO_OPEN_NEW_TAB_DESC"
+                    class="switcher btn-group btn-group-yesno"
+                    default="0"
+                    showon="click:url[AND]show:1">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+                <field name="close" type="radio"
+                    label="PLG_ENGAGEBOX_YESNO_CLOSEBOX"
+                    description="PLG_ENGAGEBOX_YESNO_CLOSEBOX_DESC"
+                    class="switcher btn-group btn-group-yesno"
+                    default="1"
+                    showon="click:url[AND]show:1">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+                <field name="blockEnd" type="nr_well"
+                    end="1"
+                />
+            </fields>
+            <field name="blockFooterStart" type="nr_well"
+                label="PLG_ENGAGEBOX_YESNO_FOOTER"
+                description="PLG_ENGAGEBOX_YESNO_FOOTER_DESC"
+            />
+            <field name="footer" type="textarea"
+                label="NR_TEXT"
+                description="PLG_ENGAGEBOX_YESNO_FOOTER_DESC"
+                hint="PLG_ENGAGEBOX_YESNO_FOOTER_DESC"
+                class="span12"
+                rows="5"
+            />
+            <field name="footersize" type="nrnumber"
+                label="NR_FONT_SIZE" 
+                description="NR_FONT_SIZE_DESC"
+                addon="px"
+                default="14"
+                class="input-small"
+                min="1"
+                step="2"
+            />
+            <field name="footercolor" type="color"
+                label="NR_FONT_COLOR"
+                description="NR_COLOR_DESC"
+                default="#999"
+            />
+            <field name="blockFooterEnd" type="nr_well"
+                end="1"
+            />
+        </fields>
+    </fieldset>
+</form>

@@ -1,0 +1,90 @@
+{
+    "caption": {
+        "title": "WF_CAPTION_TITLE",
+        "description": "WF_CAPTION_DESC",
+        "icon": "caption_add,caption_delete",
+        "editable": 1,
+        "row": 4,
+        "core": 1,
+        "checksum": "10fbbe34d64023a4bf9c1660d9f7fd7994ba11fd00c52930d5b9e733680ae7fb"
+    },
+    "columns": {
+        "title": "WF_COLUMNS_TITLE",
+        "description": "WF_COLUMNS_DESC",
+        "icon": "columns,columns_add,columns_delete",
+        "editable": 1,
+        "row": 4,
+        "core": 1
+    },
+    "iframe": {
+        "title": "WF_IFRAME_TITLE",
+        "description": "WF_IFRAME_DESC",
+        "icon": "iframe",
+        "editable": 1,
+        "row": 4,
+        "core": 1,
+        "checksum": "b0f9065f6874b682ef82167e8def22c9a02fddc5ffdde80034c6f33e231984bb"
+    },
+    "filemanager": {
+        "title": "WF_FILEMANAGER_TITLE",
+        "description": "WF_FILEMANAGER_DESC",
+        "icon": "filemanager",
+        "editable": 1,
+        "row": 4,
+        "core": 1,
+        "checksum": "36fd62446cdcff21af5cdedb890b518b66216ea344801a3076efbb0d72a84999"
+    },
+    "imgmanager_ext": {
+        "title": "WF_IMGMANAGER_EXT_TITLE",
+        "description": "WF_IMGMANAGER_EXT_DESC",
+        "icon": "imgmanager_ext",
+        "editable": 1,
+        "row": 4,
+        "core": 1,
+        "checksum": "523ae04070a5098d1e90d3c91d5413d8a593d93299251928aea638acd5a56e80"
+    },
+    "mediamanager": {
+        "title": "WF_MEDIAMANAGER_TITLE",
+        "description": "WF_MEDIAMANAGER_DESC",
+        "icon": "mediamanager",
+        "editable": 1,
+        "row": 4,
+        "core": 1,
+        "checksum": "7e625879ae530be67d1c5a0dd18a210b16a8347fc1731058fff4b5a4aed1baa5"
+    },
+    "templatemanager": {
+        "title": "WF_TEMPLATEMANAGER_TITLE",
+        "description": "WF_TEMPLATEMANAGER_DESC",
+        "icon": "templatemanager",
+        "editable": 1,
+        "row": 4,
+        "core": 1,
+        "checksum": "85e567ff3bd607af8ecf2025670d967b694a17bc5f822506abdb1a8f06fdd77f"
+    },
+    "microdata": {
+        "title": "WF_MICRODATA_TITLE",
+        "description": "WF_MICRODATA_DESC",
+        "icon": "microdata",
+        "editable": 1,
+        "row": 4,
+        "core": 1,
+        "checksum": "6789b1089a60f4982fd27a937815ef40dc76304482f8734943fe30b543b6d70c"
+    },
+    "source": {
+        "title": "WF_SOURCE_TITLE",
+        "description": "WF_SOURCE_DESC",
+        "icon": "",
+        "editable": 1,
+        "row": 0,
+        "core": 1,
+        "checksum": "34c41db15f36441bd89852ac0b19fa5fb095600526c6c25a06176767a48c953d"
+    },
+    "textpattern": {
+        "title": "WF_TEXTPATTERN_TITLE",
+        "description": "WF_TEXTPATTERN_DESC",
+        "icon": "",
+        "editable": 1,
+        "row": 0,
+        "core": 1
+    }
+}

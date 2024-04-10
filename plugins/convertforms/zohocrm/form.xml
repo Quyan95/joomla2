@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="service">
+        <field name="authenticationToken" type="nrtext"
+            label="PLG_CONVERTFORMS_ZOHOCRM_AUTHENTICATIONTOKEN"
+            description="PLG_CONVERTFORMS_ZOHOCRM_AUTHENTICATIONTOKEN_DESC"
+            class="input-xlarge"
+            required="true"
+            url="https://www.tassos.gr/joomla-extensions/convert-forms/docs/sync-leads-with-zohocrm"
+            urltext="PLG_CONVERTFORMS_ZOHOCRM_FIND_AUTHENTICATIONTOKEN"
+        />
+        <field name="dc" type="list"
+            label="PLG_CONVERTFORMS_ZOHOCRM_DATACENTER"
+            description="PLG_CONVERTFORMS_ZOHOCRM_DATACENTER_DESC"
+            default="crm.zoho.com">
+            <option value="crm.zoho.eu">EU</option>
+            <option value="crm.zoho.com">US</option>
+        </field>
+        <field name="zohomodule" type="list"
+            label="PLG_CONVERTFORMS_ZOHOCRM_MODULE"
+            description="PLG_CONVERTFORMS_ZOHOCRM_MODULE_DESC"
+            size="1"
+            default="leads">
+            <option value="leads">PLG_CONVERTFORMS_ZOHOCRM_LEADS</option>
+            <option value="accounts">PLG_CONVERTFORMS_ZOHOCRM_ACCOUNTS</option>
+            <option value="contacts">PLG_CONVERTFORMS_ZOHOCRM_CONTACTS</option>
+        </field>
+        <field name="updateexisting" type="radio"
+            label="PLG_CONVERTFORMS_ZOHOCRM_UPDATE_EXISTING_USER"
+            description="PLG_CONVERTFORMS_ZOHOCRM_UPDATE_EXISTING_USER_DESC"
+            class="btn-group btn-group-yesno"
+            default="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="triggerworkflow" type="radio"
+            label="PLG_CONVERTFORMS_ZOHOCRM_TRIGGER_WORKFLOW"
+            description="PLG_CONVERTFORMS_ZOHOCRM_TRIGGER_WORKFLOW_DESC"
+            class="btn-group btn-group-yesno"
+            default="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="approval" type="radio"
+            label="PLG_CONVERTFORMS_ZOHOCRM_APPROVAL"
+            description="PLG_CONVERTFORMS_ZOHOCRM_APPROVAL_DESC"
+            class="btn-group btn-group-yesno"
+            default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+    </fieldset>
+</form>

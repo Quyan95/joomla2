@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="basic">
+		
+	    <field name="enable_country_selector" type="nrtoggle"
+	    	label="COM_CONVERTFORMS_DISPLAY_COUNTRY_CODE_SELECTOR"
+	    	description="COM_CONVERTFORMS_DISPLAY_COUNTRY_CODE_SELECTOR_DESC"
+	    />
+	    <field name="default_country_option" type="list"
+	    	label="COM_CONVERTFORMS_DEFAULT_COUNTRY_CODE"
+	    	description="COM_CONVERTFORMS_DEFAULT_COUNTRY_CODE_DESC"
+			showon="enable_country_selector:1"
+			default="detect">
+			<option value="detect">COM_CONVERTFORMS_FIELD_COUNTRY_DETECT</option>
+			<option value="select">COM_CONVERTFORMS_SELECT_COUNTRY</option>
+			<option value="custom">COM_CONVERTFORMS_SET_COUNTRY_CODE</option>
+		</field>
+	    <field name="default_country" type="NR_Geo"
+	    	label="COM_CONVERTFORMS_SELECT_COUNTRY"
+	    	description="COM_CONVERTFORMS_SELECT_COUNTRY_DESC"
+            showon="enable_country_selector:1[AND]default_country_option:select"
+	    />
+	    <field name="default_country_custom" type="text"
+	    	label="COM_CONVERTFORMS_COUNTRY_CODE"
+	    	description="COM_CONVERTFORMS_COUNTRY_CODE_DESC"
+			hint="GR"
+            showon="enable_country_selector:1[AND]default_country_option:custom"
+	    />
+		
+        
+	</fieldset>
+	<fieldset name="restrictions">
+	    <field name="inputmask" type="inputmask"
+	    	label="COM_CONVERTFORMS_INPUT_MASK_DEPRECATED"
+	    	description="COM_CONVERTFORMS_INPUT_MASK_DESC"
+	    />
+        <field name="readonly" type="nrtoggle" 
+            label="COM_CONVERTFORMS_READONLY"
+            description="COM_CONVERTFORMS_READONLY_DESC"
+		/>
+	</fieldset>
+</form>

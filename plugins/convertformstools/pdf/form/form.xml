@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="pdf" label="PLG_CONVERTFORMSTOOLS_PDF_ALIAS" tab="behavior">
+        <fields name="pdf">
+            
+            
+            <field name="pdf_enabled" type="nrtoggle" 
+                label="PLG_CONVERTFORMSTOOLS_PDF_ENABLE"
+                description="PLG_CONVERTFORMSTOOLS_PDF_DESC"
+            />
+            <field name="pdf_template" type="textarea"
+                label="PLG_CONVERTFORMSTOOLS_PDF_TEMPLATE"
+                description="PLG_CONVERTFORMSTOOLS_PDF_TEMPLATE_DESC"
+                class="editorx show-smart-tags"
+                filter="raw"
+                required="true"
+               default="Thank you for submitting our form!&lt;br&gt;&lt;br&gt;Here are the details you sent us:&lt;br&gt;&lt;br&gt;{all_fields}"
+                showon="pdf_enabled:1">
+            </field>
+            <field name="pdf_upload_folder" type="text" 
+                label="PLG_CONVERTFORMSTOOLS_PDF_UPLOAD_FOLDER"
+                description="PLG_CONVERTFORMSTOOLS_PDF_UPLOAD_FOLDER_DESC"
+                class="show-smart-tags"
+                default="media/com_convertforms/pdf"
+                hint="media/com_convertforms/pdf"
+                required="true"
+                showon="pdf_enabled:1">
+            </field>
+            <field name="pdf_filename_prefix" type="text" 
+                label="PLG_CONVERTFORMSTOOLS_PDF_FILENAME_PREFIX"
+                description="PLG_CONVERTFORMSTOOLS_PDF_FILENAME_PREFIX_DESC"
+                class="show-smart-tags"
+                hint=""
+                default=""
+                showon="pdf_enabled:1">
+            </field>
+            <field name="pdf_remove_after" type="nrnumber" 
+                label="PLG_CONVERTFORMSTOOLS_PDF_REMOVE_AFTER"
+                description="PLG_CONVERTFORMSTOOLS_PDF_REMOVE_AFTER_DESC"
+                default="0"
+                min="0"
+                addon="NR_DAYS"
+                showon="pdf_enabled:1"
+            />
+            <field name="pdf_paper_size" type="list" 
+                label="PLG_CONVERTFORMSTOOLS_PDF_PAPER_SIZE"
+                description="PLG_CONVERTFORMSTOOLS_PDF_PAPER_SIZE_DESC"
+                showon="pdf_enabled:1"
+                default="letter">
+                    <option value="letter">PLG_CONVERTFORMSTOOLS_PDF_LETTER</option>
+                    <option value="half-letter">PLG_CONVERTFORMSTOOLS_PDF_HALF_LETTER</option>
+                    <option value="legal">PLG_CONVERTFORMSTOOLS_PDF_LEGAL</option>
+                    <option value="ledger">PLG_CONVERTFORMSTOOLS_PDF_LEDGER</option>
+                    <option value="tabloid">PLG_CONVERTFORMSTOOLS_PDF_TABLOID</option>
+                    <option value="executive">PLG_CONVERTFORMSTOOLS_PDF_EXECUTIVE</option>
+                    <option value="a0">A0</option>
+                    <option value="a1">A1</option>
+                    <option value="a2">A2</option>
+                    <option value="a3">A3</option>
+                    <option value="a4">A4</option>
+                    <option value="a5">A5</option>
+                    <option value="a6">A6</option>
+            </field>
+            <field name="pdf_orientation" type="list" 
+                label="PLG_CONVERTFORMSTOOLS_PDF_ORIENTATION"
+                description="PLG_CONVERTFORMSTOOLS_PDF_ORIENTATION_DESC"
+                showon="pdf_enabled:1"
+                default="portrait">
+                    <option value="portrait">PLG_CONVERTFORMSTOOLS_PDF_PORTRAIT</option>
+                    <option value="landscape">PLG_CONVERTFORMSTOOLS_PDF_LANDSCAPE</option>
+            </field>
+            
+        </fields>
+    </fieldset>
+</form>

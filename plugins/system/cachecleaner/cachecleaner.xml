@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4" type="plugin" group="system" method="upgrade">
+  <name>PLG_SYSTEM_CACHECLEANER</name>
+  <description>PLG_SYSTEM_CACHECLEANER_DESC</description>
+  <version>9.1.0</version>
+  <creationDate>November 2023</creationDate>
+  <author>Regular Labs (Peter van Westen)</author>
+  <authorEmail>info@regularlabs.com</authorEmail>
+  <authorUrl>https://regularlabs.com</authorUrl>
+  <copyright>Copyright © 2023 Regular Labs - All Rights Reserved</copyright>
+  <license>GNU General Public License version 2 or later</license>
+  <namespace path="src">RegularLabs\Plugin\System\CacheCleaner</namespace>
+  <scriptfile>script.install.php</scriptfile>
+  <files>
+    <file plugin="cachecleaner">cachecleaner.php</file>
+    <folder>language</folder>
+    <folder>src</folder>
+  </files>
+  <media folder="media" destination="cachecleaner">
+    <folder>css</folder>
+    <folder>js</folder>
+    <folder>scss</folder>
+  </media>
+  <config>
+    <fields name="params" addfieldprefix="RegularLabs\Library\Form\Field">
+      <fieldset name="basic">
+        <field name="@load_script_descriptions" type="LoadMedia" filetype="script" file="regularlabs.admin-form-descriptions"/>
+        <field name="@load_language_mod_menu" type="LoadLanguage" extension="mod_menu"/>
+        <field name="@load_language_com_cache" type="LoadLanguage" extension="com_cache"/>
+        <field name="@load_language_regularlabs" type="LoadLanguage" extension="plg_system_regularlabs"/>
+        <field name="@load_language_mod" type="LoadLanguage" extension="mod_cachecleaner"/>
+        <field name="@load_language_plg" type="LoadLanguage" extension="plg_system_cachecleaner"/>
+        <field name="@license" type="License" extension="CACHECLEANER"/>
+        <field name="@version" type="Version" extension="CACHECLEANER"/>
+        <field name="@dependency" type="Dependency" label="CC_THE_MODULE" file="/administrator/modules/mod_cachecleaner/mod_cachecleaner.xml"/>
+        <field name="@header" type="Header" label="CACHECLEANER" description="CACHECLEANER_DESC" url="https://regularlabs.com/cachecleaner"/>
+      </fieldset>
+      <fieldset name="CC_WHAT">
+        <field name="@block__basic__a" type="Block" start="1" label="CC_JOOMLA_CACHE"/>
+        <field name="@clean_cache" type="Radio" class="btn-group rl-btn-group btn-group-md btn-group-yesno" default="1" label="CC_PURGE_CACHE" description="CC_PURGE_CACHE_DESC">
+          <option value="1">JYES</option>
+        </field>
+        <field name="@clean_cache_min_age" type="OnlyPro" label="CC_MIN_AGE_IN_MINUTES" description="CC_MIN_AGE_IN_MINUTES_DESC"/>
+        <field name="purge" type="Radio" class="btn-group rl-btn-group btn-group-md btn-group-yesno" default="1" label="COM_CACHE_PURGE_EXPIRED" description="CC_PURGE_EXPIRED_CACHE_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+          <option value="2" class="btn btn-outline-info">CC_ONLY_VIA_BUTTON</option>
+        </field>
+        <field name="purge_updates" type="Radio" class="btn-group rl-btn-group btn-group-md btn-group-yesno" default="1" label="CC_PURGE_UPDATE_CACHE" description="CC_PURGE_UPDATE_CACHE_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+          <option value="2" class="btn btn-outline-info">CC_ONLY_VIA_BUTTON</option>
+        </field>
+        <field name="purge_disabled_redirects" type="Radio" class="btn-group rl-btn-group btn-group-md btn-group-yesno" default="0" label="CC_PURGE_DISABLED_REDIRECTS" description="CC_PURGE_DISABLED_REDIRECTS_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+          <option value="2" class="btn btn-outline-info">CC_ONLY_VIA_BUTTON</option>
+        </field>
+        <field name="purge_disabled_redirects_min_age" type="Range" default="0" min="0" max="300" step="1" label="CC_MIN_AGE_IN_DAYS" showon="purge_disabled_redirects:1,2"/>
+        <field name="@invalidate_media_versions" type="OnlyPro" label="CC_INVALIDATE_MEDIA_VERSIONS" description="CC_INVALIDATE_MEDIA_VERSIONS_DESC"/>
+        <field name="checkin" type="Radio" class="btn-group rl-btn-group btn-group-md btn-group-yesno" default="1" label="MOD_MENU_GLOBAL_CHECKIN" description="CC_GLOBAL_CHECKIN_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+          <option value="2" class="btn btn-outline-info">CC_ONLY_VIA_BUTTON</option>
+        </field>
+        <field name="@block__basic__b" type="Block" end="1"/>
+        <field name="@block__tmp__a" type="Block" start="1" label="CC_TMP_FOLDER"/>
+        <field name="clean_tmp" type="Radio" class="btn-group rl-btn-group btn-group-md btn-group-yesno" default="2" label="CC_EMPTY_TMP_FOLDER" description="CC_EMPTY_TMP_FOLDER_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+          <option value="2" class="btn btn-outline-info">CC_ONLY_VIA_BUTTON</option>
+        </field>
+        <field name="@clean_tmp_min_age" type="OnlyPro" label="CC_MIN_AGE_IN_MINUTES" description="CC_MIN_AGE_IN_MINUTES_DESC" showon="clean_tmp:1,2"/>
+        <field name="@block__tmp__b" type="Block" end="1"/>
+        <field name="@block__folders__a" type="Block" start="1" label="CC_CUSTOM_FOLDERS"/>
+        <field name="@note__clean_folders" type="OnlyPro" label="CC_EMPTY_CUSTOM_FOLDERS" description="CC_EMPTY_CUSTOM_FOLDERS_DESC"/>
+        <field name="@block__folders__b" type="Block" end="1"/>
+        <field name="@block__tables__a" type="Block" start="1" label="CC_TABLES"/>
+        <field name="@note__clean_tables" type="OnlyPro" label="CC_CLEAN_TABLES"/>
+        <field name="@block__tables__b" type="Block" end="1"/>
+        <field name="@block__server__a" type="Block" start="1" label="CC_SERVER_CACHE"/>
+        <field name="@note__purge_litespeed" type="OnlyPro" label="CC_PURGE_LITESPEED" description="CC_PURGE_LITESPEED_DESC"/>
+        <field name="@note__purge_opcache" type="OnlyPro" label="CC_PURGE_OPCACHE" description="CC_PURGE_OPCACHE_DESC"/>
+        <field name="@note__clean_siteground" type="OnlyPro" label="CC_SITEGROUND_CACHE" description="CC_SITEGROUND_CACHE_DESC"/>
+        <field name="@block__server__b" type="Block" end="1"/>
+        <field name="@block__cdn__a" type="Block" start="1" label="CC_CDN_CACHE"/>
+        <field name="@note__clean_cloudflare" type="OnlyPro" label="CC_CLOUDFLARE" description="CC_CDN_DESC,CC_CLOUDFLARE"/>
+        <field name="@note__clean_keycdn" type="OnlyPro" label="CC_KEYCDN" description="CC_CDN_DESC,CC_KEYCDN"/>
+        <field name="@note__clean_cdn77" type="OnlyPro" label="CC_CDN77" description="CC_CDN_DESC,CC_CDN77"/>
+        <field name="@block__cdn__b" type="Block" end="1"/>
+        <field name="@block__url__a" type="Block" start="1" label="CC_QUERY_URL" description="CC_QUERY_URL_DESC"/>
+        <field name="@note__query_url" type="OnlyPro"/>
+        <field name="@block__uB" type="Block" end="1"/>
+      </fieldset>
+      <fieldset name="CC_HOW">
+        <field name="@block__quick_link__a" type="Block" start="1" label="CC_QUICK_LINK" description="CC_QUICK_LINK_DESC"/>
+        <field name="display_statusbar_button" type="Radio" class="btn-group rl-btn-group btn-group-md btn-group-yesno" default="1" label="RL_DISPLAY_STATUSBAR_BUTTON" description="RL_DISPLAY_STATUSBAR_BUTTON_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="display_toolbar_button" type="Radio" class="btn-group rl-btn-group btn-group-md btn-group-yesno" default="1" label="RL_DISPLAY_TOOLBAR_BUTTON" description="RL_DISPLAY_TOOLBAR_BUTTON_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="add_button_text" type="Radio" class="btn-group rl-btn-group btn-group-md btn-group-yesno" default="both" label="RL_ADD_BUTTON_TEXT" description="RL_ADD_BUTTON_TEXT_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="button_text" type="Text" default="Clean Cache" label="RL_BUTTON_TEXT" description="RL_BUTTON_TEXT_DESC" showon="add_button_text:1"/>
+        <field name="button_classname" type="Text" default="" label="CC_BUTTON_CLASSNAME" description="CC_BUTTON_CLASSNAME_DESC"/>
+        <field name="@block__quick_link__b" type="Block" end="1"/>
+        <field name="@block__secret__a" type="Block" start="1" label="CC_FRONTEND_SECRET_URL"/>
+        <field name="@note__secret" type="Note" class="rl-alert alert alert-info rl-alert-light" text="CC_FRONTEND_SECRET_URL_DESC"/>
+        <field name="frontend_secret" type="Text" default="" label="CC_FRONTEND_SECRET" description="CC_FRONTEND_SECRET_DESC"/>
+        <field name="frontend_secret_msg" type="Radio" class="btn-group rl-btn-group btn-group-md btn-group-yesno" default="1" label="CC_SHOW_MESSAGE" description="CC_SHOW_MESSAGE_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="@block__secret__b" type="Block" end="1"/>
+        <field name="@block__save__a" type="Block" start="1" label="CC_AUTOMATIC_CLEANING_ON_SAVE" description="CC_AUTOMATIC_CLEANING_ON_SAVE_DESC"/>
+        <field name="@block__save_admin__a" type="Block" start="1" label="JADMINISTRATOR"/>
+        <field name="auto_save_admin" type="Radio" class="btn-group rl-btn-group btn-group-md btn-group-yesno" default="0" label="RL_ENABLE" description="CC_AUTOMATIC_CLEANING_ON_SAVE_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="auto_save_admin_msg" type="Radio" class="btn-group rl-btn-group btn-group-md btn-group-yesno" default="1" label="CC_SHOW_MESSAGE" description="CC_SHOW_MESSAGE_DESC" showon="auto_save_admin:1">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="@block__save_admin__b" type="Block" end="1"/>
+        <field name="@block__save_front__a" type="Block" start="1" label="RL_FRONTEND"/>
+        <field name="auto_save_front" type="Radio" class="btn-group rl-btn-group btn-group-md btn-group-yesno" default="0" label="RL_ENABLE" description="CC_AUTOMATIC_CLEANING_ON_SAVE_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="auto_save_front_msg" type="Radio" class="btn-group rl-btn-group btn-group-md btn-group-yesno" default="0" label="CC_SHOW_MESSAGE" description="CC_SHOW_MESSAGE_DESC" showon="auto_save_front:1">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="@block__save_front__b" type="Block" end="1"/>
+        <field name="auto_save_tasks" type="TextArea" default="save,apply,publish,unpublish,archive,trash,delete" class="" label="CC_SAVE_TASKS" description="CC_SAVE_TASKS_DESC" showon="auto_save_admin:1[OR]auto_save_front:1"/>
+        <field name="@block__save__b" type="Block" end="1"/>
+        <field name="@block__interval__a" type="Block" start="1" label="CC_AUTOMATIC_CLEANING_BY_INTERVAL" description="CC_AUTOMATIC_CLEANING_BY_INTERVAL_DESC"/>
+        <field name="@note__interval" type="OnlyPro"/>
+        <field name="@block__interval__b" type="Block" end="1"/>
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="show_size" type="Radio" class="btn-group rl-btn-group btn-group-md btn-group-yesno" default="1" label="CC_SHOW_SIZE" description="CC_SHOW_SIZE_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="ignore_folders" type="TextArea" default="" label="CC_IGNORE_FOLDERS" description="CC_IGNORE_FOLDERS_DESC"/>
+        <field name="@note__log_path" type="OnlyPro" label="CC_LOG_PATH" description="CC_LOG_PATH_DESC"/>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

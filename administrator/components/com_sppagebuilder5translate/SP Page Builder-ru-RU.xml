@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.9" method="upgrade">
+	<name>SP Page Builder 5 Translate</name>
+	<author>Dmitry Goncharov</author>
+	<creationDate>01 Dec 2023</creationDate>
+	<authorEmail>info@goncharoff.pro</authorEmail>
+	<authorUrl>https://goncharoff.pro</authorUrl>
+	<license>GNU General Public License version 2 or later</license>
+	<version>5.2.0</version>
+	
+	<languages folder="site">
+		<language tag="ru-RU">ru-RU/ru-RU.com_sppagebuilder.ini</language>
+	</languages>
+
+	<administration>
+		<languages folder="admin">
+		<language tag="ru-RU">ru-RU/ru-RU.com_sppagebuilder.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.com_sppagebuilder.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

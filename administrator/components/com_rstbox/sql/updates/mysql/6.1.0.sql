@@ -1,0 +1,1 @@
+ALTER TABLE `#__rstbox` CHANGE `position` `position` VARCHAR(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL;

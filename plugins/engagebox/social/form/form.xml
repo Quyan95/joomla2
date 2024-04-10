@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="social">
+        <field name="blockStart" type="nr_well"
+			label="PLG_ENGAGEBOX_SOCIAL_ALIAS"
+			description="PLG_ENGAGEBOX_SOCIAL_DESC"
+        />
+        <field name="socialplugin" type="groupedlist"
+            default="facebook" 
+            label="COM_RSTBOX_SOCIAL_PLUGIN" 
+            description="COM_RSTBOX_SOCIAL_PLUGIN_DESC">
+                <option value="fbpagelike">Facebook Page Like</option>
+                <option value="fbpost">Facebook Post</option>
+                <option value="twfollow">Twitter Follow Button</option>
+        </field>
+        <field name="blockEnd" type="nr_well"
+            end="1"
+        />
+        <field name="blockTwitter" type="nr_well"
+            label="Twitter"
+            description="Create a popup with your Twitter Follow button"
+            showon="socialplugin:twfollow"
+        />
+        <field name="social_tw_hanbdle" type="text"
+            label="COM_RSTBOX_SOCIAL_TW_HANDLE"
+            description="COM_RSTBOX_SOCIAL_TW_HANDLE_DESC"
+            hint="@twitterhandle"
+        />
+        <field name="social_tw_largebutton" type="nrtoggle"
+            label="COM_RSTBOX_SOCIAL_TW_LARGE_BUTTON"
+            description="COM_RSTBOX_SOCIAL_TW_LARGE_BUTTON_DESC"
+            class="switcher btn-group btn-group-yesno" 
+            checked="true" 
+        />
+        <field name="social_tw_showusername" type="nrtoggle"
+            label="COM_RSTBOX_SOCIAL_TW_SHOW_USERNAME"
+            description="COM_RSTBOX_SOCIAL_TW_SHOW_USERNAME_DESC"
+            checked="true" 
+            class="switcher btn-group btn-group-yesno" 
+        />
+        <field name="social_tw_count" type="nrtoggle"
+            label="COM_RSTBOX_SOCIAL_TW_COUNT"
+            description="COM_RSTBOX_SOCIAL_TW_COUNT_DESC"
+            class="switcher btn-group btn-group-yesno" 
+            checked="true" 
+        />
+        <field name="blockTwitterEnd" type="nr_well"
+            end="1"
+        />
+        <field name="blockFBLike" type="nr_well"
+            label="Facebook Page Like"
+            description="Create a popup with your Facebook Page Like button"
+            showon="socialplugin:fbpagelike"
+        />
+        <field name="socialurl" type="URL"
+            label="COM_RSTBOX_SOCIAL_FB_URL"
+            description="COM_RSTBOX_SOCIAL_FB_URL_DESC"
+            hint="https://www.facebook.com"
+            class="input-xxlarge"
+        />
+        <field name="fbtabs" type="checkboxes"
+            label="COM_RSTBOX_SOCIAL_FB_TABS"
+            description="COM_RSTBOX_SOCIAL_FB_TABS_DESC"
+            multiple="multiple">
+            <option value="timeline">Timeline</option>
+            <option value="messages">Messages</option>
+            <option value="events">Events</option>
+        </field>
+        <field name="fbhidecover" type="nrtoggle"
+            label="COM_RSTBOX_SOCIAL_FB_HIDE_COVER"
+            description="COM_RSTBOX_SOCIAL_FB_HIDE_COVER_DESC"
+            class="switcher btn-group btn-group-yesno" 
+        />
+        <field name="fbsmallheader" type="nrtoggle" 
+            label="COM_RSTBOX_SOCIAL_FB_SMALL_HEADER"
+            description="COM_RSTBOX_SOCIAL_FB_SMALL_HEADER_DESC"
+            class="switcher btn-group btn-group-yesno" 
+        />
+        <field name="fbfacepile" type="nrtoggle"
+            label="COM_RSTBOX_SOCIAL_FB_FACEPILE"
+            description="COM_RSTBOX_SOCIAL_FB_FACEPILE_DESC"
+            class="switcher btn-group btn-group-yesno" 
+            checked="true"
+        />
+        <field name="socialwidth" type="text" 
+            class="input-small"
+            description="NR_WIDTH_DESC"
+            label="NR_WIDTH"
+            hint="200px"
+        />
+        <field name="socialheight" type="text" 
+            class="input-small"
+            label="NR_HEIGHT"
+            hint="200px"
+            description="NR_HEIGHT_DESC"
+        />
+        <field name="blockFBLikeEnd" type="nr_well"
+            end="1"
+        />
+        <field name="blockFBPost" type="nr_well"
+            label="Facebook Post"
+            description="Embed a Facebook Post within a popup!"
+            showon="socialplugin:fbpost"
+        />
+        <field name="social_fb_post_url" type="URL"
+            label="COM_RSTBOX_SOCIAL_FB_POST_URL"
+            description="COM_RSTBOX_SOCIAL_FB_POST_URL_DESC"
+            class="input-xxlarge"
+            hint="https://www.facebook.com/"
+        />
+        <field name="blockFBPostEnd" type="nr_well"
+            end="1"
+        />
+        <field name="blockBehavior" type="nr_well"
+            label="COM_RSTBOX_BOX_BEHAVIOR"
+            description="COM_RSTBOX_BOX_BEHAVIOR_DESC"
+        />
+        <field name="sociallang" type="list"
+            default="auto" 
+            showon="socialplugin:fbpagelike,fbpost"
+            class="btn-group btn-group-yesno" 
+            label="COM_RSTBOX_SOCIAL_LANG"
+            description="COM_RSTBOX_SOCIAL_LANG_DESC">
+            <option value="auto">Auto</option>
+            <option value="en_US">English</option>
+        </field>
+        <field name="async" type="list" 
+            label="COM_RSTBOX_ASYNC"
+            default="afterOpen"
+            description="COM_RSTBOX_ASYNC_DESC">
+                <option value="dom">Disable</option>
+                <option value="beforeOpen">Before Box Open</option>
+                <option value="afterOpen">After Box Open</option>
+                <option value="pageLoad">on Page Load</option>
+        </field>
+        <field name="blockBehaviorEnd" type="nr_well"
+			end="1"
+        />
+        <field name="blockStart3" type="nr_well"
+            label="COM_RSTBOX_TEXT"
+            description="COM_RSTBOX_TEXT_DESC"
+        />
+        <field name="socialtext" type="editor" 
+            filter="raw" 
+            label="COM_RSTBOX_TEXT" 
+            description="COM_RSTBOX_TEXT_DESC"
+            buttons="true"
+        />
+        <field name="blockEnd3" type="nr_well"
+            end="1"
+        />
+    </fieldset>
+</form>

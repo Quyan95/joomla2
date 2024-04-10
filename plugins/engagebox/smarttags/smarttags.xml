@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4.0" type="plugin" group="engagebox" method="upgrade">
+	<name>PLG_ENGAGEBOX_SMARTTAGS</name>
+	<description>PLG_ENGAGEBOX_SMARTTAGS_DESC</description>
+    <version>1.0</version>
+    <author>Tassos Marinos</author>
+    <authorEmail>info@tassos.gr</authorEmail>
+    <authorUrl>http://www.tassos.gr</authorUrl>
+    <copyright>Copyright (c) 2018 Tassos Marinos</copyright>
+    <license>GNU General Public License version 3, or later</license>
+    <creationDate>January 2017</creationDate>
+    <scriptfile>script.install.php</scriptfile>
+	<files>
+        <folder>language</folder>
+		<filename plugin="smarttags">smarttags.php</filename>
+        <filename>script.install.helper.php</filename>
+	</files>
+</extension>

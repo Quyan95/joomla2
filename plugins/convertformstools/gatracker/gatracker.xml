@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4.0" type="plugin" group="convertformstools" method="upgrade">
+	<name>PLG_CONVERTFORMSTOOLS_GATRACKER</name>
+	<description>PLG_CONVERTFORMSTOOLS_GATRACKER_DESC</description>
+	<version>1.0</version>
+	<creationDate>Apr 2019</creationDate>
+	<copyright>Copyright © 2023 Tassos All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<author>Tassos Marinos (Tassos.gr)</author>
+	<authorEmail>info@tassos.gr</authorEmail>
+	<authorUrl>http://www.tassos.gr</authorUrl>
+	<scriptfile>script.install.php</scriptfile>
+	<files>
+		<filename plugin="gatracker">gatracker.php</filename>
+		<filename>script.install.helper.php</filename>
+		<folder>language</folder>
+		<folder>form</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="tracking_id" type="text"
+					label="PLG_CONVERTFORMSTOOLS_GATRACKER_TRACKING_ID" 
+					description="PLG_CONVERTFORMSTOOLS_GATRACKER_TRACKING_ID_DESC"
+					hint="G-XXXXXXXXXX"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+	<media folder="media" destination="plg_convertformstools_gatracker">
+        <folder>js</folder>
+    </media>
+</extension>

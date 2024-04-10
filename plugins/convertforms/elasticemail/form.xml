@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="service">
+        <field name="api" type="nrtext"
+            label="PLG_CONVERTFORMS_ELASTICEMAIL_KEY"
+            description="PLG_CONVERTFORMS_ELASTICEMAIL_KEY_DESC"
+            class="input-xlarge"
+            required="true"
+            url="https://www.tassos.gr/joomla-extensions/convert-forms/docs/sync-leads-with-elasticemail"
+            urltext="PLG_CONVERTFORMS_ELASTICEMAIL_FIND_API_KEY"
+        />
+        <field name="list" type="servicelists"
+            label="PLG_CONVERTFORMS_ELASTICEMAIL_LIST_ID"
+            description="PLG_CONVERTFORMS_ELASTICEMAIL_LIST_ID_DESC"
+            class="input-xlarge"
+            required="true"
+        />
+        <field name="doubleoptin" type="radio"
+            label="PLG_CONVERTFORMS_ELASTICEMAIL_DOUBLE_OPTIN"
+            description="PLG_CONVERTFORMS_ELASTICEMAIL_DOUBLE_OPTIN_DESC"
+            class="btn-group btn-group-yesno"
+            default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="updateexisting" type="radio"
+            label="PLG_CONVERTFORMS_ELASTICEMAIL_UPDATE_EXISTING_USER"
+            description="PLG_CONVERTFORMS_ELASTICEMAIL_UPDATE_EXISTING_USER_DESC"
+            class="btn-group btn-group-yesno"
+            default="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="publicAccountID" type="hidden" default="" />
+    </fieldset>
+</form>

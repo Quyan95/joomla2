@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="basic">
+        <field name="confirmfield" type="text"
+        	label="COM_CONVERTFORMS_FIELD_CONFIRM_FIELD"
+        	description="COM_CONVERTFORMS_FIELD_CONFIRM_FIELD_DESC"
+        />
+        <field name="confirm_type" type="list"
+        	label="COM_CONVERTFORMS_FIELD_CONFIRM_TYPE"
+        	description="COM_CONVERTFORMS_FIELD_CONFIRM_TYPE_DESC"
+            default="text">
+            <option value="text">COM_CONVERTFORMS_FIELD_TEXT</option>
+            <option value="password">COM_CONVERTFORMS_FIELD_PASSWORD</option>
+        </field>
+    </fieldset>
+	<fieldset name="restrictions">
+	    <field name="inputmask" type="inputmask"
+	    	label="COM_CONVERTFORMS_INPUT_MASK"
+	    	description="COM_CONVERTFORMS_INPUT_MASK_DESC"
+	    />
+    </fieldset>
+</form>

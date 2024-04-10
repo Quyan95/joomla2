@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="phpscripts" label="PLG_ENGAGEBOX_PHPSCRIPTS_NAME" description="PLG_ENGAGEBOX_PHPSCRIPTS_FIELDSET_DESC" tag="params" help="https://www.tassos.gr/joomla-extensions/engagebox/docs/working-with-php-scripts">
+        <fields name="phpscripts">
+            
+            <field name="beforerender" type="textarea"
+                label="PLG_ENGAGEBOX_PHPSCRIPTS_BEFORERENDER"
+                description="PLG_ENGAGEBOX_PHPSCRIPTS_BEFORERENDER_DESC"
+                rows="10"
+                class="span12"
+            />
+            <field name="afterrender" type="textarea"
+                label="PLG_ENGAGEBOX_PHPSCRIPTS_AFTERRENDER"
+                description="PLG_ENGAGEBOX_PHPSCRIPTS_AFTERRENDER_DESC"
+                rows="10"
+                class="span12"
+            />
+            <field name="open" type="textarea"
+                label="PLG_ENGAGEBOX_PHPSCRIPTS_OPEN"
+                description="PLG_ENGAGEBOX_PHPSCRIPTS_OPEN_DESC"
+                rows="10"
+                class="span12"
+            />
+           <field name="close" type="textarea"
+                label="PLG_ENGAGEBOX_PHPSCRIPTS_CLOSE"
+                description="PLG_ENGAGEBOX_PHPSCRIPTS_CLOSE_DESC"
+                rows="10"
+                class="span12"
+            />
+            
+            
+        </fields>
+    </fieldset>
+</form>

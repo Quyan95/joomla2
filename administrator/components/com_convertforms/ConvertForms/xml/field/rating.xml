@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="basic">
+        <field name="icon" type="NRImagesSelector"
+            images="/media/plg_system_nrframework/svg/rating"
+            height="60px"
+            columns="4"
+            image_width="30px"
+            label="COM_CONVERTFORMS_FIELD_RATING_ICON"
+            description="COM_CONVERTFORMS_FIELD_RATING_ICON_DESC"
+            default="media/plg_system_nrframework/svg/rating/star.svg"
+        />
+        <field name="size" type="nrnumber"
+            label="NR_SIZE"
+            description="COM_CONVERTFORMS_FIELD_RATING_SIZE_DESC"
+            addon="px"
+            min="0"
+            default="24"
+        />
+        <field name="max_rating" type="nrnumber"
+            label="COM_CONVERTFORMS_FIELD_RATING_MAX_RATING"
+            description="COM_CONVERTFORMS_FIELD_RATING_MAX_RATING_DESC"
+            min="1"
+            default="5"
+        />
+        <field name="half_ratings" type="nrtoggle"
+            label="COM_CONVERTFORMS_FIELD_RATINGS_HALF"
+            description="COM_CONVERTFORMS_FIELD_RATINGS_HALF_DESC"
+        />
+        <field name="selected_color" type="color" 
+            default="#f6cc01"
+            keywords="transparent,none"
+            format="rgba"
+            label="COM_CONVERTFORMS_FIELD_RATING_SELECTED_COLOR"
+            description="COM_CONVERTFORMS_FIELD_RATING_SELECTED_COLOR_DESC"
+            position="bottom"
+        />
+        <field name="unselected_color" type="color" 
+            default="#ceced2"
+            keywords="transparent,none"
+            format="rgba"
+            label="COM_CONVERTFORMS_FIELD_RATING_UNSELECTED_COLOR"
+            description="COM_CONVERTFORMS_FIELD_RATING_UNSELECTED_COLOR_DESC"
+            position="bottom"
+        />
+    </fieldset>
+    <fieldset name="restrictions">
+        <field name="readonly" type="nrtoggle" 
+            label="COM_CONVERTFORMS_READONLY"
+            description="COM_CONVERTFORMS_READONLY_DESC"
+		/>
+    </fieldset>
+</form>

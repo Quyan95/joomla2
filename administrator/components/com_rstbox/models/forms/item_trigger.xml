@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="items">
+        <field type="spacer" class="h2" name="rstbox-trigger-section" label="COM_RSTBOX_TRIGGER"/>
+        <field name="triggermethod" type="EBTriggers" 
+            label="COM_RSTBOX_ITEM_TRIGGER" 
+            description="COM_RSTBOX_ITEM_TRIGGER_DESC"
+            default="pageload"
+        />
+        
+        <field name="idle_time" type="nrnumber" 
+            label="COM_ENGAGEBOX_IDLE_TIMER" 
+            description="COM_ENGAGEBOX_IDLE_TIMER_DESC"
+            default="10"
+            hint="10"
+            addon="sec"
+            min="1"
+            filter="intval"
+            class="input-small"
+            showon="triggermethod:onIdle"
+        />
+        <field name="triggerelement" type="text" 
+            showon="triggermethod:element,elementHover,onclick,onexternallink"
+            label="COM_RSTBOX_ITEM_TRIGGER_ELEMENT2" 
+            description="COM_RSTBOX_ITEM_TRIGGER_ELEMENT_DESC"
+            hint="#comments"
+        />
+        <field name="preventdefault" type="nrtoggle"
+            label="COM_RSTBOX_ITEM_TRIGGER_PREVENTDEFAULT"
+            description="COM_RSTBOX_ITEM_TRIGGER_PREVENTDEFAULT_DESC" 
+            showon="triggermethod:onclick"
+            checked="true"
+        />
+        <field name="threshold" type="nrnumber" 
+            label="COM_ENGAGEBOX_ELEMENT_VISIBILITY_THRESHOLD" 
+            description="COM_ENGAGEBOX_ELEMENT_VISIBILITY_THRESHOLD_DESC"
+            class="input-small" 
+            showon="triggermethod:element"
+            default="0"
+            step="10"
+            max="100"
+            min="0"
+            filter="intval"
+            addon="%"
+            size="6"
+        />
+        <field name="close_out_viewport" type="nrtoggle" 
+            label="COM_ENGAGEBOX_CLOSE_OUT_VIEWPORT" 
+            description="COM_ENGAGEBOX_CLOSE_OUT_VIEWPORT_DESC"
+            showon="triggermethod:element"
+        />
+        <field name="scroll_depth" type="list" 
+            label="COM_ENGAGEBOX_SCROLL_DEPTH" 
+            description="COM_ENGAGEBOX_SCROLL_DEPTH_DESC"
+            default="percentage"
+            showon="triggermethod:pageheight">
+                <option value="percentage">COM_ENGAGEBOX_PERCENTAGE</option>
+                <option value="pixel">COM_ENGAGEBOX_PIXEL</option>
+        </field>
+        <field name="scroll_pixel" type="nrnumber" 
+            label="COM_ENGAGEBOX_SCROLL_PIXEL" 
+            description="COM_ENGAGEBOX_SCROLL_PIXEL_DESC"
+            class="input-small" 
+            showon="triggermethod:pageheight[AND]scroll_depth:pixel"
+            default="100"
+            hint="100"
+            step="100"
+            min="0"
+            filter="intval"
+            addon="px"
+        />
+        <field name="triggerpercentage" type="nrnumber" 
+            class="input-small" 
+            showon="triggermethod:pageheight[AND]scroll_depth:percentage"
+            label="COM_RSTBOX_ITEM_TRIGGER_PERCENTAGE" 
+            default="80"
+            hint="80"
+            step="10"
+            max="100"
+            min="0"
+            filter="intval"
+            addon="%"
+            description="COM_RSTBOX_ITEM_TRIGGER_PERCENTAGE_DESC"
+            size="6"
+        />
+        <field name="exittimer" type="nrnumber" 
+            label="COM_RSTBOX_EXIT_TIMER" 
+            description="COM_RSTBOX_EXIT_TIMER_DESC"
+            default="1000"
+            hint="1000"
+            filter="intval"
+            addon="ms"
+            min="0"
+            step="100"
+            showon="triggermethod:userleave"
+            class="input-small">
+        </field>
+        <!-- <field name="scroll_dir" type="radio" 
+            label="COM_ENGAGEBOX_SCROLL_DIRECTION" 
+            description="COM_ENGAGEBOX_SCROLL_DIRECTION_DESC"
+            class="btn-group btn-group-yesno"
+            default="down"
+            showon="triggermethod:pageheight">
+                <option value="down">COM_ENGAGEBOX_DOWN</option>
+                <option value="up">COM_ENGAGEBOX_UP</option>
+        </field> -->
+        <field name="autohide" type="nrtoggle" 
+            label="COM_RSTBOX_ITEM_AUTOHIDE" 
+            description="COM_RSTBOX_ITEM_AUTOHIDE_DESC"
+            showon="triggermethod:pageheight"
+        />
+        <field name="firing_frequency" type="list" 
+            label="COM_ENGAGEBOX_FIRING_FREQUENCY" 
+            description="COM_ENGAGEBOX_FIRING_FREQUENCY_DESC"
+            default="1"
+            showon="triggermethod:onIdle,userleave,pageheight,element">
+                <option value="1">COM_ENGAGEBOX_ONCE_PER_PAGE</option>
+                <option value="2">COM_ENGAGEBOX_UNLIMITED</option>
+        </field>
+        <field name="triggerdelay" type="nrnumber" 
+            label="COM_RSTBOX_ITEM_TRIGGER_DELAY" 
+            description="COM_RSTBOX_ITEM_TRIGGER_DELAY_DESC"
+            default="0"
+            hint="0"
+            addon="ms"
+            step="100"
+            min="0"
+            filter="intval"
+            class="input-small"
+            showon="triggermethod:pageheight,element,pageready,pageload,onclick,elementHover"
+        />
+        <field type="spacer" class="h2" name="rstbox-spacer-floating-button" label="COM_RSTBOX_ITEM_TRIGGER_FLOATINGBUTTON"
+            showon="triggermethod!:onexternallink,floatingbutton"
+        />
+        <field name="floating_button_show_on_close" type="nrtoggle"
+            label="COM_RSTBOX_FLOATING_BUTTON_SHOW_ON_CLOSE" 
+            description="COM_RSTBOX_FLOATING_BUTTON_SHOW_ON_CLOSE_DESC"
+            showon="triggermethod!:onexternallink,floatingbutton"
+        />
+        <field name="floating_button_message" type="ebbutton" 
+            label="COM_RSTBOX_FLOATING_BUTTON_MESSAGE"
+            description="COM_RSTBOX_FLOATING_BUTTON_EDIT_MESSAGE_DESC"
+            class="btn btn-primary"
+            button-text="COM_RSTBOX_FLOATING_BUTTON_EDIT_MESSAGE"
+            btn-data-bs-toggle="modal"
+            btn-data-bs-target="#floatingbutton"
+            btn-data-toggle="modal"
+            btn-data-target="#floatingbutton"
+            showon="floating_button_show_on_close:1[OR]triggermethod:floatingbutton"
+        />
+        <field name="floating_button_position" type="list" 
+            label="COM_RSTBOX_FLOATING_BUTTON_POSITION" 
+            description="COM_RSTBOX_FLOATING_BUTTON_POSITION_DESC"
+            default="bottom-right"
+            showon="floating_button_show_on_close:1[OR]triggermethod:floatingbutton">
+            <option value="top-left">COM_RSTBOX_ITEM_BOX_POSITION_TOPLEFT</option>
+            <option value="top-center">COM_RSTBOX_ITEM_BOX_POSITION_TOPCENTER</option>
+            <option value="top-right">COM_RSTBOX_ITEM_BOX_POSITION_TOPRIGHT</option>
+            <option value="middle-left">COM_RSTBOX_ITEM_BOX_POSITION_MIDDLELEFT</option>
+            <option value="middle-right">COM_RSTBOX_ITEM_BOX_POSITION_MIDDLERIGHT</option>
+            <option value="bottom-left">COM_RSTBOX_ITEM_BOX_POSITION_BOTTOMLEFT</option>
+            <option value="bottom-center">COM_RSTBOX_ITEM_BOX_POSITION_BOTTOMCENTER</option>
+            <option value="bottom-right">COM_RSTBOX_ITEM_BOX_POSITION_BOTTOMRIGHT</option>
+        </field>
+        
+        <field type="spacer" class="h2" name="rstbox-spacer-line-impressions" label="COM_RSTBOX_ASSIGN_IMPRESSIONS_LIMIT"/>
+        
+        <field name="assign_impressions" type="nrtoggle"
+            label="JENABLED" 
+            description="COM_RSTBOX_ASSIGN_IMPRESSIONS_DESC"
+        />
+        <field type="nrtext"
+            name="assign_impressions_list" 
+            description="COM_RSTBOX_LIMIT_DESC"
+            class="input-small"
+            min="1"
+            addon="COM_RSTBOX_ASSIGN_IMPRESSIONS"
+            label="COM_RSTBOX_LIMIT"
+            default="3"
+            hint="1"
+            showon="assign_impressions:1"
+        />
+        <field name="assign_impressions_param_type" type="list" 
+            label="COM_RSTBOX_ASSIGN_IMPRESSIONS_TYPE"
+            default="session"
+            showon="assign_impressions:1"
+            description="COM_RSTBOX_ASSIGN_IMPRESSIONS_TYPE_DESC">
+            <option value="session">NR_PER_SESSION</option>
+            <option value="day">NR_PER_DAY</option>
+            <option value="week">NR_PER_WEEK</option>
+            <option value="month">NR_PER_MONTH</option>
+            <option value="0">NR_FOREVER</option>
+        </field>
+        
+        
+
+        <field type="spacer" class="h2" name="ebox-accessibility" label="COM_ENGAGEBOX_ACCESSIBILITY"/>
+        
+        <field type="nrtoggle" name="autofocus"
+            label="COM_ENGAGEBOX_AUTO_FOCUS"
+            description="COM_ENGAGEBOX_AUTO_FOCUS_DESC"
+        />
+        
+        
+
+        <field type="spacer" class="h2" name="rstbox-spacer-animation" label="COM_RSTBOX_ITEM_ANIMATION"/>
+        <field name="animationin" type="ebanimationin"
+            default="transition.slideUpIn"
+            class="eb-hide-remove-btn"
+            description="COM_RSTBOX_ITEM_ANIMATION_TRANS_IN_EFFECT"
+            label="COM_RSTBOX_ITEM_ANIMATION_TRANS_IN_EFFECT_DESC"
+            search_placeholder="COM_RSTBOX_SELECT_IN_TRANSITION"
+        />
+        <field name="animationout" type="ebanimationout" 
+            default="transition.fadeOut"
+            class="eb-hide-remove-btn"
+            description="COM_RSTBOX_ITEM_ANIMATION_TRANS_OUT_EFFECT"
+            label="COM_RSTBOX_ITEM_ANIMATION_TRANS_OUT_EFFECT_DESC"
+            search_placeholder="COM_RSTBOX_SELECT_OUT_TRANSITION"
+        />
+        <field name="duration" type="nrnumber" 
+            default="300" 
+            hint="300" 
+            class="input-small"
+            addon="ms"
+            step="100"
+            min="0"
+            filter="intval"
+            label="COM_RSTBOX_ANIMATION_DURATION"
+            description="COM_RSTBOX_ANIMATION_DURATION_DESC">
+        </field>
+        <field type="spacer" class="h2" name="rstbox-spacer-line-animation" label="NR_COOKIE"/>
+        <field name="cookie_row_start" type="nr_inline"
+            label="COM_RSTBOX_ITEM_COOKIETYPE"
+            description="COM_RSTBOX_ITEM_COOKIETYPE_DESC"
+        />
+        <field name="cookie" default="30" type="nrnumber"
+            showon="cookietype:minutes,hours,days"
+            class="input-small" 
+            hiddenLabel="true"
+            min="0"
+            step="5"
+            label="COM_RSTBOX_ITEM_COOKIE" 
+            description="COM_RSTBOX_ITEM_COOKIE_DESC"
+            size="6"
+        />
+        
+        
+        <field name="cookietype" type="list" 
+            default="never"
+            hiddenLabel="true"
+            label="COM_RSTBOX_ITEM_COOKIETYPE"
+            description="COM_RSTBOX_ITEM_COOKIETYPE_DESC">
+                <option value="never">NR_NEVER</option>
+                <option value="minutes">NR_MINUTES</option>
+                <option value="hours">NR_HOURS</option>
+                <option value="days">NR_DAYS</option>
+                <option value="session">NR_SESSION</option>
+                <option value="ever">NR_FOREVER</option>
+        </field>
+        
+        <field name="cookie_row_end" type="nr_inline"
+            end="1"
+        />
+    </fieldset>
+    
+    <fieldset name="floatingbutton" label="COM_RSTBOX_FLOATING_BUTTON_EDIT_MESSAGE" popup="true">
+        <fields name="floatingbutton_message">
+            <field name="text" type="text" 
+                label="NR_TEXT"
+                description="COM_RSTBOX_FLOATING_BUTTON_MESSAGE_TEXT"
+                default="Your message here"
+            />
+            <field name="bgcolor" type="color" 
+                label="NR_BACKGROUND_COLOR"
+                description="COM_RSTBOX_FLOATING_BUTTON_MESSAGE_TEXT_BG_DESC" 
+                default="#4285F4"
+            />
+            <field name="textcolor" type="color" 
+                label="NR_TEXT_COLOR"
+                description="COM_RSTBOX_FLOATING_BUTTON_MESSAGE_TEXT_COLOR" 
+                default="#ffffff"
+            />
+            <field name="fontsize" type="nrnumber" 
+                label="NR_FONT_SIZE"
+                description="COM_RSTBOX_FLOATING_BUTTON_MESSAGE_TEXT_SIZE"
+                default="16"
+                addon="px"
+            />
+        </fields>
+    </fieldset>
+    
+</form>

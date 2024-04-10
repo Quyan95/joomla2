@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="conditionallogic" label="PLG_CONVERTFORMSTOOLS_CONDITIONALLOGIC_FIELDS" addfieldpath="plugins/convertformstools/conditionallogic/fields" tab="behavior">
+        
+        
+        <fields name="conditionallogic">
+            <field name="enable" type="nrtoggle"
+                label="PLG_CONVERTFORMSTOOLS_CONDITIONALLOGIC_ENABLE"
+                description="PLG_CONVERTFORMSTOOLS_CONDITIONALLOGIC_DESC"
+            />
+            <field name="rules" type="ConditionalLogicBuilder"
+                hiddenLabel="true"
+                label="PLG_CONVERTFORMSTOOLS_CONDITIONALLOGIC_ENABLE"
+                description="PLG_CONVERTFORMSTOOLS_CONDITIONALLOGIC_DESC"
+                showon="enable:1"
+            />
+        </fields>
+        
+    </fieldset>
+</form>
